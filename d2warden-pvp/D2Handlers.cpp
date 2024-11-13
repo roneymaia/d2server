@@ -108,27 +108,27 @@ void  __stdcall OnLastHit(UnitAny* ptKiller, UnitAny * ptVictim, Damage * ptDama
 		{
 			int Dmg = (int)ptDamage->DamageTotal >> 8;
 			if (Dmg > 50000) return;
-			// if (Dmg > ptKiller->pGame->DmgRekord) {
-			// 	ostringstream DmgStr;
-			// 	DmgStr << Dmg << "!";
-			// 	SendExEvent(ptKiller->pPlayerData->pClientData, COL_RED, D2EX_HOLYSHIT, 3, 150, -1, DmgStr.str(), DmgStr.str());
-			// 	if (!ptKiller->pGame->szRekordHolder[0]) {
-			// 		ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp)";
-			// 		ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp)";
-			// 		BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
-			// 	}
-			// 	else
-			// 	{
-			// 		ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp). Previous record belonged to " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
-			// 		ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp). Poprzedni rekord nalezal do " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
-			// 		BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
-			// 	}
+			if (Dmg > ptKiller->pGame->DmgRekord) {
+				ostringstream DmgStr;
+				DmgStr << Dmg << "!";
+				SendExEvent(ptKiller->pPlayerData->pClientData, COL_RED, D2EX_HOLYSHIT, 3, 150, -1, DmgStr.str(), DmgStr.str());
+				if (!ptKiller->pGame->szRekordHolder[0]) {
+					ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp)";
+					ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp)";
+					BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
+				}
+				else
+				{
+					ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp). Previous record belonged to " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
+					ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp). Poprzedni rekord nalezal do " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
+					BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
+				}
 
-			// 	BroadcastExEvent(ptKiller->pGame, COL_WHITE, ptKiller->dwUnitId, 0, "data\\D2Ex\\Blobs");
+				BroadcastExEvent(ptKiller->pGame, COL_WHITE, ptKiller->dwUnitId, 0, "data\\D2Ex\\Blobs");
 
-			// 	ptKiller->pGame->DmgRekord = Dmg;
-			// 	strcpy_s(ptKiller->pGame->szRekordHolder, 16, ptKiller->pPlayerData->pClientData->AccountName);
-			// }
+				ptKiller->pGame->DmgRekord = Dmg;
+				strcpy_s(ptKiller->pGame->szRekordHolder, 16, ptKiller->pPlayerData->pClientData->AccountName);
+			}
 
 
 			if ((GetTickCount() - ptVictim->pPlayerData->LastDamageTick < 5000) && ptVictim->pPlayerData->LastDamageId != 0 && ptVictim->pPlayerData->LastDamageId != ptKiller->dwUnitId) {
