@@ -108,27 +108,27 @@ void  __stdcall OnLastHit(UnitAny* ptKiller, UnitAny * ptVictim, Damage * ptDama
 		{
 			int Dmg = (int)ptDamage->DamageTotal >> 8;
 			if (Dmg > 50000) return;
-			if (Dmg > ptKiller->pGame->DmgRekord) {
-				ostringstream DmgStr;
-				DmgStr << Dmg << "!";
-				SendExEvent(ptKiller->pPlayerData->pClientData, COL_RED, D2EX_HOLYSHIT, 3, 150, -1, DmgStr.str(), DmgStr.str());
-				if (!ptKiller->pGame->szRekordHolder[0]) {
-					ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp)";
-					ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp)";
-					BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
-				}
-				else
-				{
-					ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp). Previous record belonged to " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
-					ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp). Poprzedni rekord nalezal do " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
-					BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
-				}
+			// if (Dmg > ptKiller->pGame->DmgRekord) {
+			// 	ostringstream DmgStr;
+			// 	DmgStr << Dmg << "!";
+			// 	SendExEvent(ptKiller->pPlayerData->pClientData, COL_RED, D2EX_HOLYSHIT, 3, 150, -1, DmgStr.str(), DmgStr.str());
+			// 	if (!ptKiller->pGame->szRekordHolder[0]) {
+			// 		ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp)";
+			// 		ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp)";
+			// 		BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
+			// 	}
+			// 	else
+			// 	{
+			// 		ostringstream EngMsg; EngMsg << ptKiller->pPlayerData->pClientData->AccountName << " has set a new damage record! (" << Dmg << " hp). Previous record belonged to " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
+			// 		ostringstream PolMsg; PolMsg << ptKiller->pPlayerData->pClientData->AccountName << " ustanowil nowy rekord obrazen! (" << Dmg << " hp). Poprzedni rekord nalezal do " << ptKiller->pGame->szRekordHolder << " (" << ptKiller->pGame->DmgRekord << ')';
+			// 		BroadcastEventMsgEx(ptKiller->pGame, COL_YELLOW, EngMsg.str(), PolMsg.str());
+			// 	}
 
-				BroadcastExEvent(ptKiller->pGame, COL_WHITE, ptKiller->dwUnitId, 0, "data\\D2Ex\\Blobs");
+			// 	BroadcastExEvent(ptKiller->pGame, COL_WHITE, ptKiller->dwUnitId, 0, "data\\D2Ex\\Blobs");
 
-				ptKiller->pGame->DmgRekord = Dmg;
-				strcpy_s(ptKiller->pGame->szRekordHolder, 16, ptKiller->pPlayerData->pClientData->AccountName);
-			}
+			// 	ptKiller->pGame->DmgRekord = Dmg;
+			// 	strcpy_s(ptKiller->pGame->szRekordHolder, 16, ptKiller->pPlayerData->pClientData->AccountName);
+			// }
 
 
 			if ((GetTickCount() - ptVictim->pPlayerData->LastDamageTick < 5000) && ptVictim->pPlayerData->LastDamageId != 0 && ptVictim->pPlayerData->LastDamageId != ptKiller->dwUnitId) {
@@ -448,7 +448,7 @@ int __fastcall ReparseChat(Game* pGame, UnitAny *pUnit, BYTE *ThePacket, int Pac
 
 	if (nNameLen > 12)
 	{
-		_snprintf_s(text, 256, 256, "%s: ÿc%d%s", szName, COL_WHITE, Msg);
+		_snprintf_s(text, 256, 256, "%s: ï¿½c%d%s", szName, COL_WHITE, Msg);
 
 		MsgLen = 27 + strlen(text);
 		aPacket = new BYTE[MsgLen];
@@ -718,7 +718,7 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 
 				if (pUnit->pPlayerData->SaidGO) 
 				{
-					SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Powiedzia³eœ ju¿ to!" : "You've already said that", PartyCount);
+					SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Powiedziaï¿½eï¿½ juï¿½ to!" : "You've already said that", PartyCount);
 					return false;
 				}
 
@@ -828,7 +828,7 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 			{
 				if (!isAnAdmin(pUnit->pPlayerData->pClientData->AccountName)) return TRUE;
 				Warden::getInstance().loadConfig();
-				SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Ustawienia prze³adowane." : "Config reloaded.");
+				SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Ustawienia przeï¿½adowane." : "Config reloaded.");
 				return false;
 			}
 			if (_stricmp(str, "#reloadclans") == 0)
@@ -932,11 +932,11 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 					sLR -= ResBonus;
 				}
 
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "Resistances : ÿc1Fire '%d'/'%d%%', ÿc9Light '%d'/'%d%%', ÿc3Cold '%d'/'%d%%', ÿc2Poison '%d'/'%d%%'", sFR, sMFR, sLR, sMLR, sCR, sMCR, sPR, sMPR);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "FCR ÿc9'%d'ÿcc, FRW ÿc9'%d'ÿcc, FHR ÿc9'%d'ÿcc, IAS ÿc9'%d'", sFCR, sFRW, sFHR, sIAS);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "DS ÿc9'%d%%'ÿcc, OW ÿc9'%d%%'ÿcc, CB ÿc9'%d%%'ÿcc, DR ÿc9'%d%%'", sDS, sOW, sCB, sDR);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "ÿc1Fire Abs ÿc9'%d%%' ÿc3Cold Abs ÿc9'%d%%' ÿc9Light Abs ÿc9'%d%%'ÿc;, MF ÿc9'%d%%'", sFABS, sCABS, sLABS, sMF);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "ÿc1Life : '%d', ÿc3Mana : '%d', ÿccLife Replenish : ÿc9'%d'", aLife, aMana, sREP);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "Resistances : ï¿½c1Fire '%d'/'%d%%', ï¿½c9Light '%d'/'%d%%', ï¿½c3Cold '%d'/'%d%%', ï¿½c2Poison '%d'/'%d%%'", sFR, sMFR, sLR, sMLR, sCR, sMCR, sPR, sMPR);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "FCR ï¿½c9'%d'ï¿½cc, FRW ï¿½c9'%d'ï¿½cc, FHR ï¿½c9'%d'ï¿½cc, IAS ï¿½c9'%d'", sFCR, sFRW, sFHR, sIAS);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "DS ï¿½c9'%d%%'ï¿½cc, OW ï¿½c9'%d%%'ï¿½cc, CB ï¿½c9'%d%%'ï¿½cc, DR ï¿½c9'%d%%'", sDS, sOW, sCB, sDR);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "ï¿½c1Fire Abs ï¿½c9'%d%%' ï¿½c3Cold Abs ï¿½c9'%d%%' ï¿½c9Light Abs ï¿½c9'%d%%'ï¿½c;, MF ï¿½c9'%d%%'", sFABS, sCABS, sLABS, sMF);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "ï¿½c1Life : '%d', ï¿½c3Mana : '%d', ï¿½ccLife Replenish : ï¿½c9'%d'", aLife, aMana, sREP);
 				return false;
 			}
 			if (_stricmp(str, "#move") == 0)

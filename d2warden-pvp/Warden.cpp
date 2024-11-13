@@ -355,14 +355,16 @@ DWORD __fastcall Warden::onJoinGame(PacketData *pPacket)
 
 void Warden::reloadClans()
 {
-	wcfgClans = INIReader("Clans.ini");
-	if (wcfgClans.ParseError() < 0) {
-		Log("Failed to open Clans.ini!");
-		clansAvailable = false;
-	}
-	else {
-		clansAvailable = true;
-	}
+	clansAvailable = false;
+
+	// wcfgClans = INIReader("Clans.ini");
+	// if (wcfgClans.ParseError() < 0) {
+	// 	Log("Failed to open Clans.ini!");
+	// 	clansAvailable = false;
+	// }
+	// else {
+	// 	clansAvailable = true;
+	// }
 }
 
 void Warden::loadConfig()
@@ -754,12 +756,12 @@ void Warden::loop(Game* pGame)
 					//break;
 					case 1:
 					{
-						pWardenClient->MyIp.assign((char*)&pWardenClient->wardenPacket.ThePacket[8]);
-						if (pWardenClient->MyIp == "127.0.0.1")
-						{
-							Log("Hack: %s (*%s) is using RedVex (IP='%s')!", pWardenClient->CharName.c_str(), pWardenClient->AccountName.c_str(), pWardenClient->MyIp.c_str());
-						}
-						pWardenClient->RedVexDetected = 1;
+						// pWardenClient->MyIp.assign((char*)&pWardenClient->wardenPacket.ThePacket[8]);
+						// if (pWardenClient->MyIp == "127.0.0.1")
+						// {
+						// 	Log("Hack: %s (*%s) is using RedVex (IP='%s')!", pWardenClient->CharName.c_str(), pWardenClient->AccountName.c_str(), pWardenClient->MyIp.c_str());
+						// }
+						// pWardenClient->RedVexDetected = 1;
 					}
 					break;
 					case 2:

@@ -176,7 +176,7 @@ enum MessageResult
 	MSG_OK = 0,
 	MSG_UNK = 1,
 	MSG_ERROR = 2,
-	MSG_HACK = 3
+	MSG_HACK = 0 // Default 3
 };
 
 enum PartyButtons

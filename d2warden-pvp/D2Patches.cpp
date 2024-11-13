@@ -80,6 +80,8 @@ void Warden::patchD2()
 
 	PatchGS(CALL, GetDllOffset("D2Game.dll", 0x89187), (DWORD)DAMAGE_AppylResistPenalty_STUB, 5, "Change the way the max resist works");
 
+	PatchGS(NOP, GetDllOffset("D2Game.dll", 0xEBEA), 0x90, 6, "Cow Level Dont Close");
+	PatchGS(NOP, GetDllOffset("D2Game.dll", 0x1FF27), 0x90, 6, "Nihlathak Portal Dont Close");
 	
 	if (wcfgClassicWW) {
 		PatchGS(NOP, GetDllOffset("D2Game.dll", 0xC14AB), 0x90, 4, "Bring back the classic ww style");
@@ -102,7 +104,7 @@ void Warden::patchD2()
 	PatchGS(CUSTOM, GetDllOffset("Fog.dll", 0x202C1), 0xEB, 1, "Disable reconnect spam hacklisting");
 
 	PatchGS(CALL, GetDllOffset("D2Game.dll", D2GAME_PARSE_CREATE_PACKETS), (DWORD)OnCreatePacketReceive, 5, "Create packet parser");
-	PatchGS(JUMP, GetDllOffset("D2Game.dll", D2GAME_GAME_LOOP), (DWORD)MainLoop_ASM, 5, "Game loop");
+	// PatchGS(JUMP, GetDllOffset("D2Game.dll", D2GAME_GAME_LOOP), (DWORD)MainLoop_ASM, 5, "Game loop");
 
 	PatchGS(CALL, GetDllOffset("D2Game.dll", 0xBFFC0), (DWORD)D2Stubs::UBERQUEST_SpawnMonsters_STUB, 5, "Spawn uber monsters");
 		
@@ -118,7 +120,7 @@ void Warden::patchD2()
 
 	PatchGS(JUMP, GetDllOffset("D2Common.dll", -10864), (DWORD)LEVELS_GetActByLevelNo, 5, "Replace original GetActByLevelNo");
 
-	PatchGS(CALL, GetDllOffset("D2Game.dll", 0x970FC), (DWORD)D2Stubs::D2GAME_OnCustomFunc_STUB, 49, "CubeMain.Txt custom functions replacement");
+	// PatchGS(CALL, GetDllOffset("D2Game.dll", 0x970FC), (DWORD)D2Stubs::D2GAME_OnCustomFunc_STUB, 49, "CubeMain.Txt custom functions replacement");
 #endif
 
 	PatchGS(CALL, GetDllOffset("D2Game.dll", D2GAME_ON_DEBUG_PACKET), (DWORD)D2Stubs::OnDebugPacketReceive_STUB, 5, "Fix Debug Packet Parser");
