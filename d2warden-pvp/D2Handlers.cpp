@@ -448,7 +448,7 @@ int __fastcall ReparseChat(Game* pGame, UnitAny *pUnit, BYTE *ThePacket, int Pac
 
 	if (nNameLen > 12)
 	{
-		_snprintf_s(text, 256, 256, "%s: ÿc%d%s", szName, COL_WHITE, Msg);
+		_snprintf_s(text, 256, 256, "%s: \u00FFc%d%s", szName, COL_WHITE, Msg);
 
 		MsgLen = 27 + strlen(text);
 		aPacket = new BYTE[MsgLen];
@@ -718,7 +718,7 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 
 				if (pUnit->pPlayerData->SaidGO) 
 				{
-					SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Powiedziaÿeÿ juÿ to!" : "You've already said that", PartyCount);
+					SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Powiedzia\u00FFe\u00FF ju\u00FF to!" : "You've already said that", PartyCount);
 					return false;
 				}
 
@@ -828,7 +828,7 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 			{
 				if (!isAnAdmin(pUnit->pPlayerData->pClientData->AccountName)) return TRUE;
 				Warden::getInstance().loadConfig();
-				SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Ustawienia przeÿadowane." : "Config reloaded.");
+				SendMsgToClient(pUnit->pPlayerData->pClientData, pUnit->pPlayerData->pClientData->LocaleID == 10 ? "Ustawienia prze\u00FFadowane." : "Config reloaded.");
 				return false;
 			}
 			if (_stricmp(str, "#reloadclans") == 0)
@@ -932,11 +932,11 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 					sLR -= ResBonus;
 				}
 
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "Resistances : ÿc1Fire '%d'/'%d%%', ÿc9Light '%d'/'%d%%', ÿc3Cold '%d'/'%d%%', ÿc2Poison '%d'/'%d%%'", sFR, sMFR, sLR, sMLR, sCR, sMCR, sPR, sMPR);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "FCR ÿc9'%d'ÿcc, FRW ÿc9'%d'ÿcc, FHR ÿc9'%d'ÿcc, IAS ÿc9'%d'", sFCR, sFRW, sFHR, sIAS);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "DS ÿc9'%d%%'ÿcc, OW ÿc9'%d%%'ÿcc, CB ÿc9'%d%%'ÿcc, DR ÿc9'%d%%'", sDS, sOW, sCB, sDR);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "ÿc1Fire Abs ÿc9'%d%%' ÿc3Cold Abs ÿc9'%d%%' ÿc9Light Abs ÿc9'%d%%'ÿc;, MF ÿc9'%d%%'", sFABS, sCABS, sLABS, sMF);
-				SendMsgToClient(pUnit->pPlayerData->pClientData, "ÿc1Life : '%d', ÿc3Mana : '%d', ÿccLife Replenish : ÿc9'%d'", aLife, aMana, sREP);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "Resistances : \u00FFc1Fire '%d'/'%d%%', \u00FFc9Light '%d'/'%d%%', \u00FFc3Cold '%d'/'%d%%', \u00FFc2Poison '%d'/'%d%%'", sFR, sMFR, sLR, sMLR, sCR, sMCR, sPR, sMPR);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "FCR \u00FFc9'%d'\u00FFcc, FRW \u00FFc9'%d'\u00FFcc, FHR \u00FFc9'%d'\u00FFcc, IAS \u00FFc9'%d'", sFCR, sFRW, sFHR, sIAS);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "DS \u00FFc9'%d%%'\u00FFcc, OW \u00FFc9'%d%%'\u00FFcc, CB \u00FFc9'%d%%'\u00FFcc, DR \u00FFc9'%d%%'", sDS, sOW, sCB, sDR);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "\u00FFc1Fire Abs \u00FFc9'%d%%' \u00FFc3Cold Abs \u00FFc9'%d%%' \u00FFc9Light Abs \u00FFc9'%d%%'\u00FFc;, MF \u00FFc9'%d%%'", sFABS, sCABS, sLABS, sMF);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "\u00FFc1Life : '%d', \u00FFc3Mana : '%d', \u00FFccLife Replenish : \u00FFc9'%d'", aLife, aMana, sREP);
 				return false;
 			}
 			if (_stricmp(str, "#move") == 0)
