@@ -523,7 +523,7 @@ DWORD __fastcall OnClickUnit(Game* pGame, UnitAny* pPlayer, SkillTargetPacket *p
 	}
 	if (SkillId == D2S_WHIRLWIND && !Warden::getInstance().wcfgAllowNLWW)
 	{
-		SendMsgToClient(pPlayerData->pClientData, pPlayerData->pClientData->LocaleID == 10 ? "NLWW jest zabronione na tym serwerze" : "NLWW Is Not Allowed On This Server");
+		// SendMsgToClient(pPlayerData->pClientData, pPlayerData->pClientData->LocaleID == 10 ? "NLWW jest zabronione na tym serwerze" : "NLWW Is Not Allowed On This Server");
 		return MSG_OK;
 	}
 

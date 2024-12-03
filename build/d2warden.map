@@ -1,6 +1,6 @@
  d2warden
 
- Timestamp is 673d5492 (Wed Nov 20 00:16:34 2024)
+ Timestamp is 674f76a3 (Tue Dec  3 18:22:43 2024)
 
  Preferred load address is 10000000
 
@@ -24,27 +24,27 @@
  0002:0000021c 00000004H .CRT$XTA                DATA
  0002:00000220 00000010H .CRT$XTZ                DATA
  0002:00000224 00000000H .gfids$y                DATA
- 0002:00000230 00004110H .rdata                  DATA
- 0002:00004340 00000000H .rdata$CastGuardVftablesA DATA
- 0002:00004340 00000000H .rdata$CastGuardVftablesC DATA
- 0002:00004340 00000018H .rdata$T                DATA
- 0002:00004358 000003a8H .rdata$r                DATA
- 0002:00004700 000000a0H .rdata$sxdata           DATA
- 0002:000047a0 00000028H .rdata$voltmd           DATA
- 0002:000047c8 000003c0H .rdata$zzzdbg           DATA
- 0002:00004b88 00000004H .rtc$IAA                DATA
- 0002:00004b8c 00000004H .rtc$IZZ                DATA
- 0002:00004b90 00000004H .rtc$TAA                DATA
- 0002:00004b94 00000004H .rtc$TZZ                DATA
- 0002:00004b98 00000004H .tls                    DATA
- 0002:00004b9c 00000004H .tls$                   DATA
- 0002:00004ba0 00000008H .tls$ZZZ                DATA
- 0002:00004ba8 00000be8H .xdata$x                DATA
- 0002:00005790 00000038H .edata                  DATA
- 0002:000057c8 000000c8H .idata$2                DATA
- 0002:00005890 00000014H .idata$3                DATA
- 0002:000058a4 000001f0H .idata$4                DATA
- 0002:00005a94 00000e02H .idata$6                DATA
+ 0002:00000230 000040d0H .rdata                  DATA
+ 0002:00004300 00000000H .rdata$CastGuardVftablesA DATA
+ 0002:00004300 00000000H .rdata$CastGuardVftablesC DATA
+ 0002:00004300 00000018H .rdata$T                DATA
+ 0002:00004318 000003a8H .rdata$r                DATA
+ 0002:000046c0 000000a0H .rdata$sxdata           DATA
+ 0002:00004760 00000028H .rdata$voltmd           DATA
+ 0002:00004788 000003c0H .rdata$zzzdbg           DATA
+ 0002:00004b48 00000004H .rtc$IAA                DATA
+ 0002:00004b4c 00000004H .rtc$IZZ                DATA
+ 0002:00004b50 00000004H .rtc$TAA                DATA
+ 0002:00004b54 00000004H .rtc$TZZ                DATA
+ 0002:00004b58 00000004H .tls                    DATA
+ 0002:00004b5c 00000004H .tls$                   DATA
+ 0002:00004b60 00000008H .tls$ZZZ                DATA
+ 0002:00004b68 00000be8H .xdata$x                DATA
+ 0002:00005750 00000038H .edata                  DATA
+ 0002:00005788 000000c8H .idata$2                DATA
+ 0002:00005850 00000014H .idata$3                DATA
+ 0002:00005864 000001f0H .idata$4                DATA
+ 0002:00005a54 00000e02H .idata$6                DATA
  0003:00000000 00000244H .data                   DATA
  0003:00000244 0000007cH .data$r                 DATA
  0003:000002c0 000001b0H .data$rs                DATA
@@ -65,9 +65,8 @@
  0000:00000000       ___guard_iat_count         00000000     <absolute>
  0000:00000000       ___x64_code_ranges_to_entry_points_count 00000000     <absolute>
  0000:00000000       ___hybrid_code_map         00000000     <absolute>
- 0000:00000000       ___arm64x_redirection_metadata 00000000     <absolute>
- 0000:00000000       ___hybrid_auxiliary_iat_copy 00000000     <absolute>
  0000:00000000       ___arm64x_extra_rfe_table_size 00000000     <absolute>
+ 0000:00000000       ___hybrid_auxiliary_iat_copy 00000000     <absolute>
  0000:00000000       ___guard_iat_table         00000000     <absolute>
  0000:00000000       ___guard_longjmp_count     00000000     <absolute>
  0000:00000000       ___hybrid_auxiliary_iat    00000000     <absolute>
@@ -77,6 +76,7 @@
  0000:00000000       ___AbsoluteZero            00000000     <absolute>
  0000:00000000       ___enclave_config          00000000     <absolute>
  0000:00000000       ___guard_fids_table        00000000     <absolute>
+ 0000:00000000       ___arm64x_redirection_metadata 00000000     <absolute>
  0000:00000028       ___safe_se_handler_count   00000028     <absolute>
  0000:0000002c       __tls_array                0000002c     <absolute>
  0000:00000100       ___guard_flags             00000100     <absolute>
@@ -127,17 +127,17 @@
  0001:00003d90       ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10004d90 f i D2Handlers.obj
  0001:00003e00       ?_Xlen_string@std@@YAXXZ   10004e00 f i D2Handlers.obj
  0001:00003e10       ??0bad_array_new_length@std@@QAE@XZ 10004e10 f i D2Handlers.obj
- 0001:00003e30       ??1bad_array_new_length@std@@UAE@XZ 10004e30 f i D2Handlers.obj
  0001:00003e30       ??1bad_alloc@std@@UAE@XZ   10004e30 f i D2Handlers.obj
  0001:00003e30       ??1bad_cast@std@@UAE@XZ    10004e30 f i Misc.obj
- 0001:00003e50       ??_Ebad_cast@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
+ 0001:00003e30       ??1bad_array_new_length@std@@UAE@XZ 10004e30 f i D2Handlers.obj
+ 0001:00003e50       ??_Ebad_array_new_length@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
  0001:00003e50       ??_Gbad_array_new_length@std@@UAEPAXI@Z 10004e50 f i D2Handlers.obj
  0001:00003e50       ??_Gbad_alloc@std@@UAEPAXI@Z 10004e50 f i D2Handlers.obj
- 0001:00003e50       ??_Eexception@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
  0001:00003e50       ??_Ebad_alloc@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
+ 0001:00003e50       ??_Ebad_cast@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
  0001:00003e50       ??_Gexception@std@@UAEPAXI@Z 10004e50 f i D2Handlers.obj
- 0001:00003e50       ??_Ebad_array_new_length@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
  0001:00003e50       ??_Gbad_cast@std@@UAEPAXI@Z 10004e50 f i Misc.obj
+ 0001:00003e50       ??_Eexception@std@@UAEPAXI@Z 10004e50 f i * CIL library *:* CIL module *
  0001:00003e80       ??0bad_array_new_length@std@@QAE@ABV01@@Z 10004e80 f i D2Handlers.obj
  0001:00003ec0       ??0bad_alloc@std@@QAE@ABV01@@Z 10004ec0 f i D2Handlers.obj
  0001:00003f00       ?_Throw_bad_array_new_length@std@@YAXXZ 10004f00 f i D2Handlers.obj
@@ -158,12 +158,12 @@
  0001:00008370       ??$_Find_lower_bound@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@$0A@@std@@@std@@IBE?AU?$_Tree_find_result@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 10009370 f i INIReader.obj
  0001:00008460       ??$_Reallocate_grow_by@V<lambda_ab246b20b9526e2ef7792587e4298a77>@@PBDI@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEAAV01@IV<lambda_ab246b20b9526e2ef7792587e4298a77>@@PBDI@Z 10009460 f i INIReader.obj
  0001:000085d0       ??R?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QBE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@0@Z 100095d0 f i INIReader.obj
- 0001:00008670       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@@std@@QAE@XZ 10009670 f i INIReader.obj
  0001:00008670       ??1?$_Alloc_construct_ptr@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@@std@@QAE@XZ 10009670 f i INIReader.obj
+ 0001:00008670       ??1?$_Tree_temp_node_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@@std@@QAE@XZ 10009670 f i INIReader.obj
  0001:00008690       ??$_Erase_tree@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@@std@@QAEXAAV?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@1@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@1@@Z 10009690 f i INIReader.obj
  0001:000086e0       ??$_Traits_equal@U?$char_traits@D@std@@@std@@YA_NQBDI0I@Z 100096e0 f i INIReader.obj
- 0001:00008750       ??1?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@QAE@XZ 10009750 f i INIReader.obj
  0001:00008750       ??1?$char_separator@DU?$char_traits@D@std@@@boost@@QAE@XZ 10009750 f i Warden.obj
+ 0001:00008750       ??1?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@QAE@XZ 10009750 f i INIReader.obj
  0001:000088a0       _ini_parse_stream          100098a0 f   ini.obj
  0001:00008b00       ?DAMAGE_ApplyResistPenalty@@YGHPAUAttack@@PAUResRecord@@@Z 10009b00 f   LDamage.obj
  0001:00008c60       ?DAMAGE_AppylResistPenalty_STUB@@YAXXZ 10009c60 f   LDamage.obj
@@ -379,8 +379,8 @@
  0001:00019a91       ??1_Fac_tidy_reg_t@std@@QAE@XZ 1001aa91 f i msvcprt:locale0_implib.obj
  0001:00019ab8       ?_Facet_Register@std@@YAXPAV_Facet_base@1@@Z 1001aab8 f   msvcprt:locale0_implib.obj
  0001:00019ae4       @__security_check_cookie@4 1001aae4 f   MSVCRT:secchk.obj
- 0001:00019af2       ??_Gtype_info@@UAEPAXI@Z   1001aaf2 f i MSVCRT:std_type_info_static.obj
  0001:00019af2       ??_Etype_info@@UAEPAXI@Z   1001aaf2 f i MSVCRT:std_type_info_static.obj
+ 0001:00019af2       ??_Gtype_info@@UAEPAXI@Z   1001aaf2 f i MSVCRT:std_type_info_static.obj
  0001:00019b15       ??3@YAXPAXI@Z              1001ab15 f   MSVCRT:delete_scalar_size.obj
  0001:00019b23       ??2@YAPAXI@Z               1001ab23 f   MSVCRT:new_scalar.obj
  0001:00019c18       __Init_thread_abort        1001ac18 f   MSVCRT:thread_safe_statics.obj
@@ -447,25 +447,25 @@
  0001:0001aa75       __initterm                 1001ba75 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
  0001:0001aa7b       __initterm_e               1001ba7b f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
  0001:0001aa81       _free                      1001ba81 f   ucrt:api-ms-win-crt-heap-l1-1-0.dll
- 0001:0001aa87       ___scrt_stub_for_acrt_initialize 1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___acrt_thread_attach      1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___vcrt_thread_attach      1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___vcrt_thread_detach      1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___vcrt_initialize         1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___vcrt_uninitialize_critical 1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___acrt_thread_detach      1001ba87 f   MSVCRT:ucrt_stubs.obj
  0001:0001aa87       ___vcrt_uninitialize       1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___scrt_stub_for_acrt_uninitialize 1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___acrt_uninitialize_critical 1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___acrt_uninitialize       1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___scrt_stub_for_acrt_initialize 1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___vcrt_thread_attach      1001ba87 f   MSVCRT:ucrt_stubs.obj
  0001:0001aa87       ___scrt_stub_for_acrt_uninitialize_critical 1001ba87 f   MSVCRT:ucrt_stubs.obj
  0001:0001aa87       ___scrt_stub_for_acrt_thread_attach 1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___acrt_thread_detach      1001ba87 f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa87       ___scrt_stub_for_acrt_thread_detach 1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___vcrt_initialize         1001ba87 f   MSVCRT:ucrt_stubs.obj
  0001:0001aa87       ___acrt_initialize         1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___acrt_uninitialize       1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___acrt_thread_attach      1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___vcrt_thread_detach      1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___vcrt_uninitialize_critical 1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___scrt_stub_for_acrt_uninitialize 1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___scrt_stub_for_acrt_thread_detach 1001ba87 f   MSVCRT:ucrt_stubs.obj
+ 0001:0001aa87       ___acrt_uninitialize_critical 1001ba87 f   MSVCRT:ucrt_stubs.obj
  0001:0001aa8a       __is_c_termination_complete 1001ba8a f   MSVCRT:ucrt_stubs.obj
  0001:0001aa8a       ___scrt_stub_for_is_c_termination_complete 1001ba8a f   MSVCRT:ucrt_stubs.obj
- 0001:0001aa8d       __filter_x86_sse2_floating_point_exception 1001ba8d f   MSVCRT:x86_exception_filter.obj
  0001:0001aa8d       __filter_x86_sse2_floating_point_exception_default 1001ba8d f   MSVCRT:x86_exception_filter.obj
+ 0001:0001aa8d       __filter_x86_sse2_floating_point_exception 1001ba8d f   MSVCRT:x86_exception_filter.obj
  0001:0001ab10       __dtoui3                   1001bb10 f   MSVCRT:ftol3.obj
  0001:0001ab84       _memchr                    1001bb84 f   vcruntime:VCRUNTIME140.dll
  0001:0001ab8a       _memcpy                    1001bb8a f   vcruntime:VCRUNTIME140.dll
@@ -611,8 +611,8 @@
  0002:0000027c       ??_C@_1BK@MGMFAEKH@?$AAk?$AAe?$AAr?$AAn?$AAe?$AAl?$AA3?$AA2?$AA?4?$AAd?$AAl?$AAl@ 1001d27c     MSVCRT:thread_safe_statics.obj
  0002:00000298       ??_C@_0BJ@JEBJOJFJ@SleepConditionVariableCS@ 1001d298     MSVCRT:thread_safe_statics.obj
  0002:000002b4       ??_C@_0BJ@PGPPEPCC@WakeAllConditionVariable@ 1001d2b4     MSVCRT:thread_safe_statics.obj
- 0002:000002d8       __pRawDllMain              1001d2d8     MSVCRT:dll_dllmain.obj
  0002:000002d8       __pDefaultRawDllMain       1001d2d8     MSVCRT:dll_dllmain.obj
+ 0002:000002d8       __pRawDllMain              1001d2d8     MSVCRT:dll_dllmain.obj
  0002:000002e0       ??_7exception@std@@6B@     1001d2e0     MSVCRT:throw_bad_alloc.obj
  0002:000002ec       ??_7bad_alloc@std@@6B@     1001d2ec     MSVCRT:throw_bad_alloc.obj
  0002:000002f4       ??_C@_0P@GHFPNOJB@bad?5allocation@ 1001d2f4     MSVCRT:throw_bad_alloc.obj
@@ -882,8 +882,8 @@
  0002:00002228       ??_C@_0BJ@BKHNHHCI@Anyway?4?5Go?5fuck?5yourself@ 1001f228     LPackets.obj
  0002:00002244       ??_C@_0BD@GMFJLBAL@Connected?5from?3?5?$CFs@ 1001f244     LPackets.obj
  0002:00002258       ??_C@_0CP@CKCNKKBN@WARNING?3?5?$CI?$CFs?$CJ?5wanted?5to?5send?5ma@ 1001f258     LPackets.obj
- 0002:00002288       ??_C@_08BNAIINKB@23?326?300@ 1001f288     LPackets.obj
- 0002:00002294       ??_C@_0M@LOHGIPH@Oct?521?52024@ 1001f294     LPackets.obj
+ 0002:00002288       ??_C@_08ILGGKDCO@18?322?340@ 1001f288     LPackets.obj
+ 0002:00002294       ??_C@_0M@POLDLLFE@Dec?5?53?52024@ 1001f294     LPackets.obj
  0002:000022a0       ??_C@_05JAMBHBJP@1?413d@   1001f2a0     LPackets.obj
  0002:000022a8       ??_C@_0DL@NLBKBJHI@This?5is?5D2GS?5?$CFs?5by?5Lolet?5?$CIbuild@ 1001f2a8     LPackets.obj
  0002:000022e8       ??_C@_0FC@LEIANFAO@WARNING?3?5No?5action?5taken?5for?5re@ 1001f2e8     LPackets.obj
@@ -907,362 +907,361 @@
  0002:00002850       ??_C@_0CL@BKNINEOG@Teleport?5Is?5Not?5Allowed?5For?5Thi@ 1001f850     LPackets.obj
  0002:0000287c       ??_C@_0CO@PBJDEAJD@Swiety?5pocisk?5jest?5zabroniony?5n@ 1001f87c     LPackets.obj
  0002:000028ac       ??_C@_0CI@KEDLEG@Holy?5Bolt?5Is?5Not?5Allowed?5On?5Thi@ 1001f8ac     LPackets.obj
- 0002:000028d4       ??_C@_0CF@FHBGCHDB@NLWW?5jest?5zabronione?5na?5tym?5ser@ 1001f8d4     LPackets.obj
- 0002:000028fc       ??_C@_0CD@DLKFEOPC@NLWW?5Is?5Not?5Allowed?5On?5This?5Ser@ 1001f8fc     LPackets.obj
- 0002:00002920       ??_C@_0BP@GKEGPJNJ@Wpisz?5?$CDgo?5aby?5rozpoczac?5runde?$CB@ 1001f920     LPackets.obj
- 0002:00002940       ??_C@_0BI@HCPJLGHJ@Type?5?$CDgo?5to?5start?5round@ 1001f940     LPackets.obj
- 0002:00002958       ??_C@_0CK@KHLJMNMB@Trick?5?$CILeft?5window?$CJ?5X?$DN?$CFd?5Y?$DN?$CFd?0?5@ 1001f958     LPackets.obj
- 0002:00002984       ??_C@_0BA@LCFIAAPJ@Character?5Stats@ 1001f984     LPackets.obj
- 0002:00002994       ??_C@_06MDGMEDAG@Quests@   1001f994     LPackets.obj
- 0002:000029a0       ??_C@_0EB@IJBANDDD@HACK?3?5?$CFs?5?$CI?$CK?$CFs?$CJ?5used?5Polish?5GA?5T@ 1001f9a0     LPackets.obj
- 0002:000029e4       ??_C@_0CM@KMLCEALJ@Trick?5?$CIRight?5window?$CJ?5X?$DN?$CFd?5Y?$DN?$CFd?0@ 1001f9e4     LPackets.obj
- 0002:00002a10       ??_C@_09KNKLKLHB@Inventory@ 1001fa10     LPackets.obj
- 0002:00002a1c       ??_C@_0L@DKCODMCI@Skill?5Tree@ 1001fa1c     LPackets.obj
- 0002:00002a28       ??_C@_0BA@OONJAKCH@OnRunToLocation@ 1001fa28     LPackets.obj
- 0002:00002a38       ??_C@_0CK@NGDDOBIL@Didn?8t?5find?5a?5PlayerData?0?5funct@ 1001fa38     LPackets.obj
- 0002:00002a68       ??_C@_0EH@PBEPHMPL@HACK?3?5?$CFs?5?$CI?$CK?$CFs?$CJ?5tryed?5to?5move?5wh@ 1001fa68     LPackets.obj
- 0002:00002ab0       ??_C@_0BG@NGDJNAKN@OnPartyRelationChange@ 1001fab0     LParty.obj
- 0002:00002ac8       ??_C@_0FA@FHNAIMPE@C?3?2Users?2android?9jo08lemn?2Docum@ 1001fac8     LParty.obj
- 0002:00002b18       ??_C@_0N@JNOGLKCG@D2Client?4DLL@ 1001fb18     Offset.obj
- 0002:00002b28       ??_C@_0N@PMOCGBNF@D2Common?4DLL@ 1001fb28     Offset.obj
- 0002:00002b38       ??_C@_09OIGHMPCC@D2Gfx?4DLL@ 1001fb38     Offset.obj
- 0002:00002b44       ??_C@_0L@DLLLAELF@D2Lang?4DLL@ 1001fb44     Offset.obj
- 0002:00002b50       ??_C@_09LHBLGPGG@D2Win?4DLL@ 1001fb50     Offset.obj
- 0002:00002b5c       ??_C@_09LBACAOOP@D2Net?4DLL@ 1001fb5c     Offset.obj
- 0002:00002b68       ??_C@_0L@MFMOCBPO@D2Game?4DLL@ 1001fb68     Offset.obj
- 0002:00002b74       ??_C@_0N@PJLNMLED@D2Launch?4DLL@ 1001fb74     Offset.obj
- 0002:00002b84       ??_C@_07FCOLMCLA@Fog?4DLL@ 1001fb84     Offset.obj
- 0002:00002b8c       ??_C@_0N@BMEDKJIO@BNClient?4DLL@ 1001fb8c     Offset.obj
- 0002:00002b9c       ??_C@_09GKIEHNCI@Storm?4DLL@ 1001fb9c     Offset.obj
- 0002:00002ba8       ??_C@_09ICHJBHEP@D2Cmp?4DLL@ 1001fba8     Offset.obj
- 0002:00002bb4       ??_C@_0M@OJGKHILE@D2Multi?4DLL@ 1001fbb4     Offset.obj
- 0002:00002bc0       ??_C@_0M@PFCHPLFO@D2Sound?4DLL@ 1001fbc0     Offset.obj
- 0002:00002bcc       ??_C@_09LKIJMCEJ@D2Gdi?4dll@ 1001fbcc     Offset.obj
- 0002:00002bd8       ??_C@_0M@EEMFLJAI@D2DDraw?4dll@ 1001fbd8     Offset.obj
- 0002:00002be4       ??_C@_0P@HJNKNJNN@D2Direct3D?4dll@ 1001fbe4     Offset.obj
- 0002:00002bf4       ??_C@_0M@KLCMIDPK@D2Glide?4dll@ 1001fbf4     Offset.obj
- 0002:00002c00       ??_C@_0N@PPODABPK@d2server?4dll@ 1001fc00     Offset.obj
- 0002:00002c10       ??_C@_0CG@MOGAHGDO@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5NODESEX?5CRASH?5LOG?5?$DN?$DN?$DN?$DN@ 1001fc10     D2Stubs.obj
- 0002:00002c38       ??_C@_0BC@BADGCKIG@pNode?9?$DOpUnit?5?$DN?5?$CFd@ 1001fc38     D2Stubs.obj
- 0002:00002c4c       ??_C@_0BK@HEBEPDKN@?7pNode?9?$DOpUnit?9?$DOdwType?3?5?$CFs@ 1001fc4c     D2Stubs.obj
- 0002:00002c68       ??_C@_0BN@GCECKDAE@?7pNode?9?$DOpUnit?9?$DOdwClassId?3?5?$CFd@ 1001fc68     D2Stubs.obj
- 0002:00002c88       ??_C@_0BL@GGGMIFNJ@?7pNode?9?$DOpUnit?9?$DONodeIdx?3?5?$CFd@ 1001fc88     D2Stubs.obj
- 0002:00002ca4       ??_C@_0BN@GAAEAMFP@?7pNode?5location?3?5?$CFd?5?$FL?$CFd?0?5?$CFd?$FN@ 1001fca4     D2Stubs.obj
- 0002:00002cc4       ??_C@_0BP@PGCFOIAG@?7p?5Node?5location?5is?5unknown?$CB?$CB?$CB@ 1001fcc4     D2Stubs.obj
- 0002:00002ce4       ??_C@_0O@GCDIBJCP@pNode?5?$DN?$DN?5NULL@ 1001fce4     D2Stubs.obj
- 0002:00002cf4       ??_C@_0O@PEBLLFOH@pMonster?5?$DN?5?$CFd@ 1001fcf4     D2Stubs.obj
- 0002:00002d04       ??_C@_0BG@GGPICAIN@?7pMonster?9?$DOdwType?3?5?$CFs@ 1001fd04     D2Stubs.obj
- 0002:00002d1c       ??_C@_0BJ@FJKGNNHJ@?7pMonster?9?$DOdwClassId?3?5?$CFd@ 1001fd1c     D2Stubs.obj
- 0002:00002d38       ??_C@_0BH@FNBAEJMC@?7pMonster?9?$DONodeIdx?3?5?$CFd@ 1001fd38     D2Stubs.obj
- 0002:00002d50       ??_C@_0CA@IAFAFOID@?7pMonster?5location?3?5?$CFd?5?$FL?$CFd?0?5?$CFd?$FN@ 1001fd50     D2Stubs.obj
- 0002:00002d70       ??_C@_0CI@DMELPHBP@?7p?5NodetpMonster?5location?5is?5un@ 1001fd70     D2Stubs.obj
- 0002:00002d98       ??_C@_0BB@LLFAIFOF@pMonster?5?$DN?$DN?5NULL@ 1001fd98     D2Stubs.obj
- 0002:00002dac       ??_C@_0CC@HDNIKMGB@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5Dump?5of?5old?5nodes?5?$DN?$DN?$DN?$DN@ 1001fdac     D2Stubs.obj
- 0002:00002dd0       ??_C@_0P@HCCIDMBN@NODES?$FL?$CFd?$FN?5?$DN?5?$CFd@ 1001fdd0     D2Stubs.obj
- 0002:00002de0       ??_C@_0BM@GLGFIAC@Found?5non?5null?5old?5node?$CB?$CB?$CB?$CB@ 1001fde0     D2Stubs.obj
- 0002:00002dfc       ??_C@_0BD@PNDMEJPA@?7pNode?9?$DOdwType?3?5?$CFs@ 1001fdfc     D2Stubs.obj
- 0002:00002e10       ??_C@_0BG@CNLJPAKG@?7pNode?9?$DOdwClassId?3?5?$CFd@ 1001fe10     D2Stubs.obj
- 0002:00002e28       ??_C@_0BE@HDDPIACK@?7pNode?9?$DONodeIdx?3?5?$CFd@ 1001fe28     D2Stubs.obj
- 0002:00002e3c       ??_C@_0CC@HMBKJMMK@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5Dump?5of?5new?5nodes?5?$DN?$DN?$DN?$DN@ 1001fe3c     D2Stubs.obj
- 0002:00002e60       ??_C@_0BC@PNAICLDH@NEWNODES?$FL?$CFd?$FN?5?$DN?5?$CFd@ 1001fe60     D2Stubs.obj
- 0002:00002e74       ??_C@_0BJ@DHMKJJGB@pGame?9?$DOpLRosterData?50x?$CFx@ 1001fe74     D2Stubs.obj
- 0002:00002e90       ??_C@_0BI@IHKEPJBG@pGame?9?$DOdwGameState?50x?$CFx@ 1001fe90     D2Stubs.obj
- 0002:00002ea8       ??_C@_0BK@GOJKEDFO@pGame?9?$DObSpawnedClone?50x?$CFx@ 1001fea8     D2Stubs.obj
- 0002:00002ec4       ??_C@_0BC@GNDCDKEK@Warden?5clients?5?$CFd@ 1001fec4     D2Stubs.obj
- 0002:00002ed8       ??_C@_0CJ@FDLLHKBN@?$DN?$DN?$DN?5Dump?5of?5players?5in?5current?5@ 1001fed8     D2Stubs.obj
- 0002:00002f04       ??_C@_0CD@KMKDDILA@?$CFd?5?3?5?$CFs?0?5?$CFs?0?5InitStatus?5?$CFd?0?5act@ 1001ff04     D2Stubs.obj
- 0002:00002f28       ??_C@_0BP@NDLIDOM@?7pPlayer?5location?3?5?$CFd?5?$FL?$CFd?0?5?$CFd?$FN@ 1001ff28     D2Stubs.obj
- 0002:00002f48       ??_C@_0BA@DIMLKLOC@?7Player?5node?5?$CFd@ 1001ff48     D2Stubs.obj
- 0002:00002f58       ??_C@_0CF@KBLGIIPM@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5Now?5game?5will?5crash?5@ 1001ff58     D2Stubs.obj
- 0002:00002f80       ??_C@_0BM@JNNAJMFA@D2ASMFuncs?3?3D2GAME_FindUnit@ 1001ff80     D2Stubs.obj
- 0002:00002fa0       ??_C@_0FB@HPLMFKPN@C?3?2Users?2android?9jo08lemn?2Docum@ 1001ffa0     D2Stubs.obj
- 0002:00002ff4       ??_C@_0BE@BMJGLBEA@EVENTS_SendClanInfo@ 1001fff4     LEvents.obj
- 0002:00003008       ??_C@_0FB@JJLJHBFM@C?3?2Users?2android?9jo08lemn?2Docum@ 10020008     LEvents.obj
- 0002:0000305c       ??_C@_09CFNGDEDF@D2ExClans@ 1002005c     LEvents.obj
- 0002:00003068       ??_C@_0BJ@FOCFFJKM@EVENTS_BroadcastClanInfo@ 10020068     LEvents.obj
- 0002:00003084       ??_C@_0DJ@MMEECGCC@NEWCLIENT?3?5Failed?5to?5find?5a?5cli@ 10020084     LEvents.obj
- 0002:000030c0       ??_C@_02BINJDKOC@?5?9@     100200c0     LEvents.obj
- 0002:000030c4       ??_C@_0CE@PCJKBJNE@Tryb?5FFA?5jest?5w?$LD?$LJczony?5na?5tej?5g@ 100200c4     LEvents.obj
- 0002:000030e8       ??_C@_0BO@CBANEBIO@Free?5For?5All?5Mode?5Is?5Enabled?$CB@ 100200e8     LEvents.obj
- 0002:00003108       ??_C@_01GOHFPIOK@m@        10020108     LEvents.obj
- 0002:0000310c       ??_C@_0CF@KDDLBIOJ@Ustawiono?5identyfikator?5mapy?5na@ 1002010c     LEvents.obj
- 0002:00003134       ??_C@_0BF@KGLCBJGG@Custom?5Map?5Id?5?3?5?8?$CFd?8@ 10020134     LEvents.obj
- 0002:0000314c       ??_C@_01PFHFFBPC@t@        1002014c     LEvents.obj
- 0002:00003150       ??_C@_0BE@OKAAIFNI@?$PPc?$DLTryb?5turniejowy?$CB@ 10020150     LEvents.obj
- 0002:00003164       ??_C@_0BE@JIAJDNLA@?$PPc?$DLTournament?5Mode?$CB@ 10020164     LEvents.obj
- 0002:00003178       ??_C@_07KGJAJMK@SNIPER?$CB@ 10020178     LEvents.obj
- 0002:00003180       ??_C@_08FFPPJJAD@SNAJPER?$CB@ 10020180     LEvents.obj
- 0002:0000318c       ??_C@_04JCLGJEIG@LOL?$CB@  1002018c     LEvents.obj
- 0002:00003194       ??_C@_0DF@GNHBKLLJ@OnGameJoin?3?5Didn?8t?5find?5a?5unit?$CB@ 10020194     LEvents.obj
- 0002:000031cc       ??_C@_0L@NKCMCCMK@Round?5end?$CB@ 100201cc     LEvents.obj
- 0002:000031d8       ??_C@_0BC@MPEEKECB@Runda?5zakonczona?$CB@ 100201d8     LEvents.obj
- 0002:000031f0       ??_C@_0FA@EPJPODKB@C?3?2Users?2android?9jo08lemn?2Docum@ 100201f0     LItems.obj
- 0002:00003240       ??_C@_08IKACDCA@?$CDicreate@ 10020240     LItems.obj
- 0002:0000324c       ??_C@_0CM@DHDEJDKL@?$CDicreate?5?$DMicode?$DO?5?$DMiquality?5?$FL4?$FN?$DO@ 1002024c     LItems.obj
- 0002:00003278       ??_C@_0BE@LEODPOEC@Cannot?5get?5item?5idx@ 10020278     LItems.obj
- 0002:0000328c       ??_C@_0BH@JIKLPHMP@FindFreeCoords?5failed?$CB@ 1002028c     LItems.obj
- 0002:000032a4       ??_C@_0CH@IFNBDDNJ@Item?$CIs?$CJ?5created?0?5dropping?5to?5gr@ 100202a4     LItems.obj
- 0002:000032cc       ??_C@_06MPBFCLID@?$CDidupe@ 100202cc     LItems.obj
- 0002:000032d4       ??_C@_0BI@MCGINCHD@Put?5Item?5On?5The?5Cursor?$CB@ 100202d4     LItems.obj
- 0002:000032ec       ??_C@_0CE@FGKJLFIN@Item?5created?0?5dropping?5to?5groun@ 100202ec     LItems.obj
- 0002:00003310       ??_C@_08JLBCNGIM@?$CDiperson@ 10020310     LItems.obj
- 0002:0000331c       ??_C@_0BE@PINGIHC@?$CDiperson?5?$DMcharname?$DO@ 1002031c     LItems.obj
- 0002:00003330       ??_C@_0O@FEOMFKBG@Max?515?5chars?$CB@ 10020330     LItems.obj
- 0002:00003340       ??_C@_03FCEJEFGF@Ok?4@     10020340     LItems.obj
- 0002:00003344       ??_C@_0L@CPJNIEEH@?$CDiunperson@ 10020344     LItems.obj
- 0002:00003350       ??_C@_03BNBOJICL@?$CDiq@   10020350     LItems.obj
- 0002:00003358       ??_C@_0FG@NLABIANA@1?5?$DN?5cracked?52?5?$DN?5normal?53?5?$DN?5supe@ 10020358     LItems.obj
- 0002:000033b0       ??_C@_05EFOEIMO@?$CDirem@  100203b0     LItems.obj
- 0002:000033b8       ??_C@_0CK@NOJJHLHF@?$CDirem?5?$DMcharname?$DO?5?$DMitemcode?$DO?5?$DMit@ 100203b8     LItems.obj
- 0002:000033e4       ??_C@_0BF@PCCPLKKM@Player?5isn?8t?5in?5game@ 100203e4     LItems.obj
- 0002:000033fc       ??_C@_0BE@LBOGKGFI@Player?5isn?8t?5inited@ 100203fc     LItems.obj
- 0002:00003410       ??_C@_0BM@KOMJAIOD@?$CDirem?5?$DMcharname?$DO?5?$DMitemcode?$DO@ 10020410     LItems.obj
- 0002:0000342c       ??_C@_0BH@JPJGLFIH@Cannot?5find?5inventory?$CB@ 1002042c     LItems.obj
- 0002:00003444       ??_C@_0BN@MFMDMBDE@Deleted?5an?5item?5?8?$CFs?5from?5?$CFs?8@ 10020444     LItems.obj
- 0002:00003464       ??_C@_03GFOKOIPI@?$CDic@   10020464     LItems.obj
- 0002:00003468       ??_C@_0CG@MOKANCEP@Type?5item?5code?5?$CI3?5chars?5aqv?5?$DN?5a@ 10020468     LItems.obj
- 0002:00003490       ??_C@_05HPOHLPLI@?$CDipre@ 10020490     LItems.obj
- 0002:00003498       ??_C@_0BB@GNCHILPF@Type?5item?5prefix@ 10020498     LItems.obj
- 0002:000034ac       ??_C@_05DLMECFMD@?$CDisut@ 100204ac     LItems.obj
- 0002:000034b4       ??_C@_0BB@BMEKBPOC@Type?5item?5sutfix@ 100204b4     LItems.obj
- 0002:000034c8       ??_C@_05PBLAFKJC@?$CDiuni@ 100204c8     LItems.obj
- 0002:000034d0       ??_C@_0BC@OJAGKFKE@Type?5number?50?9400@ 100204d0     LItems.obj
- 0002:000034e4       ??_C@_0BF@BIOPIOAP@Item?5must?5be?5unique?$CB@ 100204e4     LItems.obj
- 0002:000034fc       ??_C@_05JGPCGBMB@?$CDiadd@ 100204fc     LItems.obj
- 0002:00003504       ??_C@_0CE@FHHBPFND@Type?5number?50?9358?0?5ItemStatCost@ 10020504     LItems.obj
- 0002:00003528       ??_C@_0L@LDDPNHLC@Type?5value@ 10020528     LItems.obj
- 0002:00003534       ??_C@_0CK@HMIHIKM@Added?5Stat?5No?5?$CFd?0?5value?5?$CFd?0?5?$CFd?5@ 10020534     LItems.obj
- 0002:00003560       ??_C@_0M@IHCGBNIG@?$CDmspawntest@ 10020560     LMonsters.obj
- 0002:0000356c       ??_C@_0BI@EIAFEOBG@Type?5monster?5index?50?9?$CFd@ 1002056c     LMonsters.obj
- 0002:00003584       ??_C@_05NIOMGKKC@Done?$CB@ 10020584     LMonsters.obj
- 0002:0000358c       ??_C@_0CB@DDGKNFIL@D2GAME_FindMonsterRoom?$CI?$CJ?5failed@ 1002058c     LMonsters.obj
- 0002:000035b0       ??_C@_07FKHLFPDM@?$CDmspawn@ 100205b0     LMonsters.obj
- 0002:000035b8       ??_C@_0BC@NCNIOHNA@Type?5number?50?9733@ 100205b8     LMonsters.obj
- 0002:000035cc       ??_C@_0BH@GBELGIGG@Spawning?5monster?5on?5?$CFs@ 100205cc     LMonsters.obj
- 0002:000035e4       ??_C@_0BG@GMMLEPCF@Error?5limit?5exceeded?$CB@ 100205e4     LMonsters.obj
- 0002:000035fc       ??_C@_0BN@BEAIALBC@?$CD?$CFd?5Monster?5spawned?0?5HP?5?$DN?5?$CFd@ 100205fc     LMonsters.obj
- 0002:0000361c       ??_C@_0BC@NHMFKHLJ@QUESTS_UpdateUnit@ 1002061c     LQuests.obj
- 0002:00003630       ??_C@_0FB@ILBPFJOM@C?3?2Users?2android?9jo08lemn?2Docum@ 10020630     LQuests.obj
- 0002:00003684       ??_C@_0BC@PODIOPO@QUESTS_OpenPortal@ 10020684     LQuests.obj
- 0002:00003698       ??_C@_0CC@JFKBPDIO@Invalid?5level?5id?5for?5portal?$CB?5?$CI?$CF@ 10020698     LQuests.obj
- 0002:000036c0       ??_C@_0FB@PNJLFIPB@C?3?2Users?2android?9jo08lemn?2Docum@ 100206c0     LRoster.obj
- 0002:00003714       ??_C@_06KPKGBFFD@NextDC@   10020714     LWorldEvent.obj
- 0002:0000371c       ??_C@_0M@PAPHILHM@World?5Event@ 1002071c     LWorldEvent.obj
- 0002:00003728       ??_C@_0CF@EJIAGFBN@The?5World?5Event?5Key?5has?5been?5cr@ 10020728     LWorldEvent.obj
- 0002:00003750       ??_C@_09FEKFGPGE@SellCount@ 10020750     LWorldEvent.obj
- 0002:0000375c       ?default_seed@?$mersenne_twister_engine@I$0CA@$0CHA@$0BIN@$0BP@$0JJAILANP@$0L@$0PPPPPPPP@$06$0JNCMFGIA@$0P@$0OPMGAAAA@$0BC@$0GMAHIJGF@@random@boost@@2IB 1002075c     LWorldEvent.obj
- 0002:00003760       ??_C@_0FB@LBIHBDJK@C?3?2Users?2android?9jo08lemn?2Docum@ 10020760     NodesEx.obj
- 0002:000037b4       ??_C@_0BN@FMOGBFIO@No?5memory?5to?5allocate?5a?5node@ 100207b4     NodesEx.obj
- 0002:000037d8       ??_C@_0EC@CDNKPELE@NodesEX?3?5nClients?$DN?$CFd?5?$DM?$DN?5wcfgMax@ 100207d8     NodesEx.obj
- 0002:0000381c       ??_C@_0CG@HDNAJHIF@NodesEx?3?5No?5memory?5to?5allocate?5@ 1002081c     NodesEx.obj
- 0002:00003844       ??_C@_0M@PKMMMKFH@ExpCallback@ 10020844     PartyExp.obj
- 0002:00003850       ??_C@_0FC@FHMOJOAF@C?3?2Users?2android?9jo08lemn?2Docum@ 10020850     PartyExp.obj
- 0002:000038a4       ??_C@_0BH@NDLJHDHF@nMember?$DOwcfgMaxPlayers@ 100208a4     PartyExp.obj
- 0002:000038bc       ??_C@_0DM@FCAEEACP@Critical?5error?5?8?$CFs?8?5in?5line?5?$CFd?0@ 100208bc     PartyExp.obj
- 0002:000038f8       ??_C@_0CC@LMNGPFIL@You?5already?5are?5watching?5someon@ 100208f8     LSpectator.obj
- 0002:0000391c       ??_C@_0BO@GNLKJLNO@You?5cannot?5watch?5a?5spectator?$CB@ 1002091c     LSpectator.obj
- 0002:0000393c       ??_C@_0BL@KMOGHFDO@You?5cannot?5watch?5yourself?$CB@ 1002093c     LSpectator.obj
- 0002:00003958       ??_C@_0DA@BJDFCPLC@You?5cannot?5watch?5a?5dead?5player?5@ 10020958     LSpectator.obj
- 0002:00003988       ??_C@_0O@NKNMEGII@list?5too?5long@ 10020988     LSpectator.obj
- 0002:00003998       ??_C@_0M@BDNOJJJD@UNIT_PLAYER@ 10020998     Misc.obj
- 0002:000039a4       ??_C@_0N@HNOEDCKN@UNIT_MONSTER@ 100209a4     Misc.obj
- 0002:000039b4       ??_C@_09GLICHAPO@UNIT_ITEM@ 100209b4     Misc.obj
- 0002:000039c0       ??_C@_0N@JFNCGIJ@UNIT_MISSILE@ 100209c0     Misc.obj
- 0002:000039d0       ??_C@_0M@IHIKBGMG@UNIT_OBJECT@ 100209d0     Misc.obj
- 0002:000039dc       ??_C@_0O@CFPGFNID@UNKNOWN_UNIT?$CB@ 100209dc     Misc.obj
- 0002:000039ec       ??_C@_0M@FJGJGPOM@?2Colors?4ini@ 100209ec     Misc.obj
- 0002:000039f8       ??_C@_06ICDCBJPI@Colors@   100209f8     Misc.obj
- 0002:00003a00       ??_C@_08HPNLODAH@whatever@ 10020a00     Misc.obj
- 0002:00003a0c       ??_C@_06IKLLLDHL@normal@   10020a0c     Misc.obj
- 0002:00003a14       ??_C@_08BLIHFJDI@superior@ 10020a14     Misc.obj
- 0002:00003a20       ??_C@_05PBCCBLFE@magic@    10020a20     Misc.obj
- 0002:00003a28       ??_C@_04HGKKAIPH@rare@     10020a28     Misc.obj
- 0002:00003a30       ??_C@_06ODCMFGLL@unique@   10020a30     Misc.obj
- 0002:00003a38       ??_C@_07MBEEIIHN@crafted@  10020a38     Misc.obj
- 0002:00003a40       ??_C@_08BCJIMAPB@tempered@ 10020a40     Misc.obj
- 0002:00003a4c       ??_C@_03IKGEINEE@?$CFs?5@  10020a4c     Misc.obj
- 0002:00003a50       ??_C@_02OEPNLDDP@GS@       10020a50     Misc.obj
- 0002:00003a54       ??_C@_05NILPPCBL@?$PPc1GS@ 10020a54     Misc.obj
- 0002:00003a5c       ??_C@_02DKCKIIND@?$CFs@    10020a5c     Misc.obj
- 0002:00003a60       ??_C@_0DI@NJDANNCE@NULL?5address?5error?5while?5patchi@ 10020a60     Misc.obj
- 0002:00003a98       ??_C@_0CB@JOMHFMDM@Cannot?5write?5bytes?5for?5patch?3?5?$CF@ 10020a98     Misc.obj
- 0002:00003abc       ??_C@_01OGPIMHDM@?$DP@     10020abc     Misc.obj
- 0002:00003ac0       ??_C@_0P@KHENEFN@?$DP?5?9?5tell?5lolet@ 10020ac0     Misc.obj
- 0002:00003ad0       ??_C@_06CMKAJGPJ@Amazon@   10020ad0     Misc.obj
- 0002:00003ad8       ??_C@_09BMNBPCGJ@Sorceress@ 10020ad8     Misc.obj
- 0002:00003ae4       ??_C@_0M@OEPIPDJH@Necromancer@ 10020ae4     Misc.obj
- 0002:00003af0       ??_C@_07DBGCNDAP@Paladin@  10020af0     Misc.obj
- 0002:00003af8       ??_C@_09ILIBCODF@Barbarian@ 10020af8     Misc.obj
- 0002:00003b04       ??_C@_05EDJAKLCL@Druid@    10020b04     Misc.obj
- 0002:00003b0c       ??_C@_08JHGIFPME@Assassin@ 10020b0c     Misc.obj
- 0002:00003b18       ??_C@_03BBKEAIF@?$DP?$DP?$DP@ 10020b18     Misc.obj
- 0002:00003b1c       ??_C@_0CA@DAJKIHOF@?$FL?$CF04d?9?$CF02d?9?$CF02d?5?$CF02d?3?$CF02d?3?$CF02d?$FN@ 10020b1c     Misc.obj
- 0002:00003b3c       ??_C@_02DPNLHKJD@a?$CL@    10020b3c     Misc.obj
- 0002:00003b40       ??_C@_0N@CIFNGJMJ@d2warden?4log@ 10020b40     Misc.obj
- 0002:00003b50       ??_C@_08EPJLHIJG@bad?5cast@ 10020b50     Misc.obj
- 0002:00003b60       ??_7bad_cast@std@@6B@      10020b60     Misc.obj
- 0002:00003b68       ??_C@_02LMMGGCAJ@?3?5@     10020b68     Warden.obj
- 0002:00003b6c       ??_C@_09FHHIKOEA@Clans?4ini@ 10020b6c     Warden.obj
- 0002:00003b78       ??_C@_0CF@NOLGCLIN@3ea42f5ac80f0d2deb35d99b4e9a780@ 10020b78     Warden.obj
- 0002:00003ba0       ??_C@_0BB@IIBBOEKF@WardenBy_Marsgod@ 10020ba0     Warden.obj
- 0002:00003bb4       ??_C@_08BHAELNAF@23?348?344@ 10020bb4     Warden.obj
- 0002:00003bc0       ??_C@_0EH@PPLBDBIM@Warden?5ver?4?52?40?5build?5?$CFd?5?$CI?$CFs?$CJ?5b@ 10020bc0     Warden.obj
- 0002:00003c08       ??_C@_0CD@FMGEFN@Setting?5allowed?5player?5limit?5on@ 10020c08     Warden.obj
- 0002:00003c2c       ??_C@_0BB@KOLPDEFP@Patching?5game?4?4?4@ 10020c2c     Warden.obj
- 0002:00003c40       ??_C@_0CI@KBGEBDMA@Incorrect?5name?5of?5module?5?8?$CFs?8?5?$CI@ 10020c40     Warden.obj
- 0002:00003c68       ??_C@_02JDPG@rb@           10020c68     Warden.obj
- 0002:00003c6c       ??_C@_0CC@EJNCHDIL@Cannot?5find?5module?5filename?5?8?$CFs@ 10020c6c     Warden.obj
- 0002:00003c90       ??_C@_0BL@PCEIIFHP@Incorrect?5module?5size?5?$CI?$CFd?$CJ@ 10020c90     Warden.obj
- 0002:00003cac       ??_C@_0BF@KEJOEFHP@Damaged?5module?5file?$CB@ 10020cac     Warden.obj
- 0002:00003cc4       ??_C@_0CC@GGAFENNN@Module?5?8?$CFs?8?5has?5loaded?5correctl@ 10020cc4     Warden.obj
- 0002:00003ce8       ??_C@_0BB@LPEKFPDC@Shutting?5down?4?4?4@ 10020ce8     Warden.obj
- 0002:00003d00       ??_C@_0EL@NFDNLDAP@WardenPacket?3?5Unexpected?5packet@ 10020d00     Warden.obj
- 0002:00003d4c       ??_C@_0DM@PHPMFINA@Dropping?5connection?5with?5?8?$CFs?8?0?5@ 10020d4c     Warden.obj
- 0002:00003d88       ??_C@_0EK@FILBENLC@Dropping?5connection?5with?5?8?$CFs?8?0?5@ 10020d88     Warden.obj
- 0002:00003dd4       ??_C@_0O@GGBBHPJF@?2D2Warden?4ini@ 10020dd4     Warden.obj
- 0002:00003de4       ??_C@_03FEKMCBF@1?05@      10020de4     Warden.obj
- 0002:00003de8       ??_C@_0O@LJHBCPAH@AllowTeleport@ 10020de8     Warden.obj
- 0002:00003df8       ??_C@_06MFHNLHFO@Warden@   10020df8     Warden.obj
- 0002:00003e00       ??_C@_02KEGNLNML@?0?5@     10020e00     Warden.obj
- 0002:00003e04       ??_C@_0M@LICFDHIA@D2ExVersion@ 10020e04     Warden.obj
- 0002:00003e10       ??_C@_0BA@JFGDGPNI@EnableSpectator@ 10020e10     Warden.obj
- 0002:00003e20       ??_C@_0P@PMDOCAHD@AddKillerClass@ 10020e20     Warden.obj
- 0002:00003e30       ??_C@_0N@HHFFOEOF@AutoIdentify@ 10020e30     Warden.obj
- 0002:00003e40       ??_C@_0N@JLODBIJB@HostileLevel@ 10020e40     Warden.obj
- 0002:00003e50       ??_C@_0N@BHEFMJFP@RespawnTimer@ 10020e50     Warden.obj
- 0002:00003e60       ??_C@_0BE@NACKICKO@DisableHostileDelay@ 10020e60     Warden.obj
- 0002:00003e74       ??_C@_0O@NGOHFIBE@AllowTourMode@ 10020e74     Warden.obj
- 0002:00003e84       ??_C@_0N@HKHMDNL@AllowVanilla@ 10020e84     Warden.obj
- 0002:00003e94       ??_C@_07BDFJEBLI@AllowGU@  10020e94     Warden.obj
- 0002:00003e9c       ??_C@_07BNIGICBD@AllowHB@  10020e9c     Warden.obj
- 0002:00003ea4       ??_C@_09JBMPMPCN@AllowNLWW@ 10020ea4     Warden.obj
- 0002:00003eb0       ??_C@_07GPGHBEEK@LogChat@  10020eb0     Warden.obj
- 0002:00003eb8       ??_C@_0BA@KNILMDHC@ResDumpInterval@ 10020eb8     Warden.obj
- 0002:00003ec8       ??_C@_0L@INDPAOFE@MaxPlayers@ 10020ec8     Warden.obj
- 0002:00003ed4       ??_C@_0L@JINEJHAP@MoveToTown@ 10020ed4     Warden.obj
- 0002:00003ee0       ??_C@_0BA@EEEOGHHO@DontDropEarGold@ 10020ee0     Warden.obj
- 0002:00003ef0       ??_C@_09LAJKPJDJ@StrBugFix@ 10020ef0     Warden.obj
- 0002:00003efc       ??_C@_07CICPFMF@FFAMode@   10020efc     Warden.obj
- 0002:00003f04       ??_C@_0BB@BLMPDBMG@EnableSeedChange@ 10020f04     Warden.obj
- 0002:00003f18       ??_C@_09FNCBEPFA@AllowD2Ex@ 10020f18     Warden.obj
- 0002:00003f24       ??_C@_0M@KHGCLLNO@DetectTrick@ 10020f24     Warden.obj
- 0002:00003f30       ??_C@_08HFNBMCGB@ExpRange@ 10020f30     Warden.obj
- 0002:00003f3c       ??_C@_0BD@CFBLOEKM@DisableRepairCosts@ 10020f3c     Warden.obj
- 0002:00003f50       ??_C@_0M@DKEJJHHF@AllowQuests@ 10020f50     Warden.obj
- 0002:00003f5c       ??_C@_0P@PMLGHLL@EnableLevelCmd@ 10020f5c     Warden.obj
- 0002:00003f6c       ??_C@_0BA@DJJNLNPB@EnableClassicWW@ 10020f6c     Warden.obj
- 0002:00003f7c       ??_C@_0BK@CJMAFNLH@AllowPierceBreakImmunites@ 10020f7c     Warden.obj
- 0002:00003f98       ??_C@_0BA@CGANCCJJ@MagicPierceStat@ 10020f98     Warden.obj
- 0002:00003fa8       ??_C@_0BD@JEEEOHLL@PhysicalPierceStat@ 10020fa8     Warden.obj
- 0002:00003fbc       ??_C@_0L@DBBEGGAE@MaxFireRes@ 10020fbc     Warden.obj
- 0002:00003fc8       ??_C@_0L@BOJIBHAB@MaxColdRes@ 10020fc8     Warden.obj
- 0002:00003fd4       ??_C@_09OAPHLPHI@MaxPsnRes@ 10020fd4     Warden.obj
- 0002:00003fe0       ??_C@_0M@CEMOBFBN@MaxLightRes@ 10020fe0     Warden.obj
- 0002:00003fec       ??_C@_09EHKKAGDP@MaxDmgRes@ 10020fec     Warden.obj
- 0002:00003ff8       ??_C@_09MEMNECON@UpdateURL@ 10020ff8     Warden.obj
- 0002:00004004       ??_C@_03HPADHAHE@N?1A@     10021004     Warden.obj
- 0002:00004008       ??_C@_06FFPJKAPA@GSName@   10021008     Warden.obj
- 0002:00004010       ??_C@_05JFEAGLCN@LOLET@    10021010     Warden.obj
- 0002:00004018       ??_C@_06HCFNNEGK@Admins@   10021018     Warden.obj
- 0002:00004020       ??_C@_07DOAOMMKG@Enabled@  10021020     Warden.obj
- 0002:00004028       ??_C@_07PPFLDEHD@MinSell@  10021028     Warden.obj
- 0002:00004030       ??_C@_07BJDLJLJC@MaxSell@  10021030     Warden.obj
- 0002:00004038       ??_C@_09ICACOPLB@InfoDelay@ 10021038     Warden.obj
- 0002:00004044       ??_C@_0CK@KIIABLMM@Invalid?5InfoDelay?5value?4?5Defaul@ 10021044     Warden.obj
- 0002:00004070       ??_C@_0BB@ODPIHDHL@rin?0?5unique?0?5122@ 10021070     Warden.obj
- 0002:00004084       ??_C@_07MBELDEGC@Trigger@  10021084     Warden.obj
- 0002:0000408c       ??_C@_0BB@KAICMDAH@Settings?5loaded?4@ 1002108c     Warden.obj
- 0002:000040a0       ??_C@_0BE@FKJAPMLA@WardenClient?3?3setup@ 100210a0     WardenClient.obj
- 0002:000040b8       ??_C@_0FG@KLICMMHD@C?3?2Users?2android?9jo08lemn?2Docum@ 100210b8     WardenClient.obj
- 0002:00004110       ??_C@_0CJ@BNBBPIOO@Error?5during?5initialization?4?5St@ 10021110     WardenInit.obj
- 0002:0000413c       ??_C@_0CB@NGALOAFD@Warden?5initialized?5successfully@ 1002113c     WardenInit.obj
- 0002:00004160       ??_C@_0BN@MLCBHJOM@Failed?5to?5init?5the?5Warden?5?3?$CI@ 10021160     WardenInit.obj
- 0002:00004180       ??_C@_0BF@PECNMKDB@Server?5shutting?5down@ 10021180     WardenInit.obj
- 0002:000041a0       __xmm@00000001000000010000000100000001 100211a0     LWorldEvent.obj
- 0002:000041b0       __xmm@41f00000000000000000000000000000 100211b0     LUberQuest.obj
- 0002:000041c0       __xmm@7ffffffe7ffffffe7ffffffe7ffffffe 100211c0     LWorldEvent.obj
- 0002:000041d0       __xmm@80000001800000018000000180000001 100211d0     LWorldEvent.obj
- 0002:000041e0       __xmm@90909090909090909090909090909090 100211e0     D2Patches.obj
- 0002:000041f0       __xmm@9908b0df9908b0df9908b0df9908b0df 100211f0     LWorldEvent.obj
- 0002:00004270       __load_config_used         10021270     MSVCRT:loadcfg.obj
- 0002:00004340       __tls_used                 10021340     MSVCRT:tlssup.obj
- 0002:00004358       ??_R4type_info@@6B@        10021358     MSVCRT:std_type_info_static.obj
- 0002:0000436c       ??_R3type_info@@8          1002136c     MSVCRT:std_type_info_static.obj
- 0002:0000437c       ??_R2type_info@@8          1002137c     MSVCRT:std_type_info_static.obj
- 0002:00004384       ??_R1A@?0A@EA@type_info@@8 10021384     MSVCRT:std_type_info_static.obj
- 0002:000043a0       ??_R2?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 100213a0     D2Handlers.obj
- 0002:000043b8       ??_R2?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 100213b8     D2Handlers.obj
- 0002:000043c4       ??_R1A@?0A@EA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 100213c4     D2Handlers.obj
- 0002:000043e0       ??_R2?$basic_ios@DU?$char_traits@D@std@@@std@@8 100213e0     D2Handlers.obj
- 0002:000043f0       ??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8 100213f0     D2Handlers.obj
- 0002:00004400       ??_R1A@A@3FA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 10021400     D2Handlers.obj
- 0002:0000441c       ??_R1A@?0A@EA@ios_base@std@@8 1002141c     D2Handlers.obj
- 0002:00004438       ??_R17?0A@EA@?$_Iosb@H@std@@8 10021438     D2Handlers.obj
- 0002:00004454       ??_R2ios_base@std@@8       10021454     D2Handlers.obj
- 0002:00004460       ??_R3ios_base@std@@8       10021460     D2Handlers.obj
- 0002:00004470       ??_R1A@A@3EA@ios_base@std@@8 10021470     D2Handlers.obj
- 0002:0000448c       ??_R1A@?0A@EA@?$_Iosb@H@std@@8 1002148c     D2Handlers.obj
- 0002:000044a8       ??_R2?$_Iosb@H@std@@8      100214a8     D2Handlers.obj
- 0002:000044b0       ??_R3?$_Iosb@H@std@@8      100214b0     D2Handlers.obj
- 0002:000044c0       ??_R17A@3EA@?$_Iosb@H@std@@8 100214c0     D2Handlers.obj
- 0002:000044dc       ??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 100214dc     D2Handlers.obj
- 0002:000044f0       ??_R3?$basic_ostream@DU?$char_traits@D@std@@@std@@8 100214f0     D2Handlers.obj
- 0002:00004500       ??_R1A@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 10021500     D2Handlers.obj
- 0002:0000451c       ??_R1A@?0A@EA@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 1002151c     D2Handlers.obj
- 0002:00004538       ??_R2?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 10021538     D2Handlers.obj
- 0002:00004540       ??_R3?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 10021540     D2Handlers.obj
- 0002:00004550       ??_R1A@?0A@EA@?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 10021550     D2Handlers.obj
- 0002:0000456c       ??_R1A@?0A@EA@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 1002156c     D2Handlers.obj
- 0002:00004588       ??_R3?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 10021588     D2Handlers.obj
- 0002:00004598       ??_R3?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 10021598     D2Handlers.obj
- 0002:000045a8       ??_R4?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ 100215a8     D2Handlers.obj
- 0002:000045bc       ??_R4?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ 100215bc     D2Handlers.obj
- 0002:000045d0       ??_R1A@?0A@EA@bad_array_new_length@std@@8 100215d0     D2Handlers.obj
- 0002:000045ec       ??_R2bad_array_new_length@std@@8 100215ec     D2Handlers.obj
- 0002:000045fc       ??_R3bad_array_new_length@std@@8 100215fc     D2Handlers.obj
- 0002:0000460c       ??_R4bad_array_new_length@std@@6B@ 1002160c     D2Handlers.obj
- 0002:00004620       ??_R1A@?0A@EA@bad_alloc@std@@8 10021620     D2Handlers.obj
- 0002:0000463c       ??_R2bad_alloc@std@@8      1002163c     D2Handlers.obj
- 0002:00004648       ??_R3bad_alloc@std@@8      10021648     D2Handlers.obj
- 0002:00004658       ??_R4bad_alloc@std@@6B@    10021658     D2Handlers.obj
- 0002:0000466c       ??_R1A@?0A@EA@exception@std@@8 1002166c     D2Handlers.obj
- 0002:00004688       ??_R2exception@std@@8      10021688     D2Handlers.obj
- 0002:00004690       ??_R3exception@std@@8      10021690     D2Handlers.obj
- 0002:000046a0       ??_R4exception@std@@6B@    100216a0     D2Handlers.obj
- 0002:000046b4       ??_R1A@?0A@EA@bad_cast@std@@8 100216b4     Misc.obj
- 0002:000046d0       ??_R2bad_cast@std@@8       100216d0     Misc.obj
- 0002:000046dc       ??_R3bad_cast@std@@8       100216dc     Misc.obj
- 0002:000046ec       ??_R4bad_cast@std@@6B@     100216ec     Misc.obj
- 0002:00004700       ___safe_se_handler_table   10021700     <linker-defined>
- 0002:000047a0       ___volatile_metadata       100217a0     <linker-defined>
- 0002:00004b88       ___rtc_iaa                 10021b88     MSVCRT:initsect.obj
- 0002:00004b8c       ___rtc_izz                 10021b8c     MSVCRT:initsect.obj
- 0002:00004b90       ___rtc_taa                 10021b90     MSVCRT:initsect.obj
- 0002:00004b94       ___rtc_tzz                 10021b94     MSVCRT:initsect.obj
- 0002:00004b98       __tls_start                10021b98     MSVCRT:tlssup.obj
- 0002:00004b9c       __Init_thread_epoch        10021b9c     MSVCRT:thread_safe_statics.obj
- 0002:00004ba0       __tls_end                  10021ba0     MSVCRT:tlssup.obj
- 0002:000056c4       __TI2?AVbad_alloc@std@@    100226c4     MSVCRT:throw_bad_alloc.obj
- 0002:000056d4       __CTA2?AVbad_alloc@std@@   100226d4     MSVCRT:throw_bad_alloc.obj
- 0002:000056e0       __CT??_R0?AVbad_array_new_length@std@@@8??0bad_array_new_length@std@@QAE@ABV01@@Z12 100226e0     D2Handlers.obj
- 0002:000056fc       __CT??_R0?AVbad_alloc@std@@@8??0bad_alloc@std@@QAE@ABV01@@Z12 100226fc     D2Handlers.obj
- 0002:00005718       __CTA3?AVbad_array_new_length@std@@ 10022718     D2Handlers.obj
- 0002:00005728       __TI3?AVbad_array_new_length@std@@ 10022728     D2Handlers.obj
- 0002:00005738       __CT??_R0?AVexception@std@@@8??0exception@std@@QAE@ABV01@@Z12 10022738     D2Handlers.obj
- 0002:00005754       __CT??_R0?AVbad_cast@std@@@8??0bad_cast@std@@QAE@ABV01@@Z12 10022754     Misc.obj
- 0002:00005770       __CTA2?AVbad_cast@std@@    10022770     Misc.obj
- 0002:0000577c       __TI2?AVbad_cast@std@@     1002277c     Misc.obj
- 0002:000057c8       __IMPORT_DESCRIPTOR_KERNEL32 100227c8     kernel32:KERNEL32.dll
- 0002:000057dc       __IMPORT_DESCRIPTOR_MSVCP140 100227dc     msvcprt:MSVCP140.dll
- 0002:000057f0       __IMPORT_DESCRIPTOR_VCRUNTIME140 100227f0     vcruntime:VCRUNTIME140.dll
- 0002:00005804       __IMPORT_DESCRIPTOR_api-ms-win-crt-runtime-l1-1-0 10022804     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
- 0002:00005818       __IMPORT_DESCRIPTOR_api-ms-win-crt-string-l1-1-0 10022818     ucrt:api-ms-win-crt-string-l1-1-0.dll
- 0002:0000582c       __IMPORT_DESCRIPTOR_api-ms-win-crt-convert-l1-1-0 1002282c     ucrt:api-ms-win-crt-convert-l1-1-0.dll
- 0002:00005840       __IMPORT_DESCRIPTOR_api-ms-win-crt-stdio-l1-1-0 10022840     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
- 0002:00005854       __IMPORT_DESCRIPTOR_api-ms-win-crt-utility-l1-1-0 10022854     ucrt:api-ms-win-crt-utility-l1-1-0.dll
- 0002:00005868       __IMPORT_DESCRIPTOR_api-ms-win-crt-time-l1-1-0 10022868     ucrt:api-ms-win-crt-time-l1-1-0.dll
- 0002:0000587c       __IMPORT_DESCRIPTOR_api-ms-win-crt-heap-l1-1-0 1002287c     ucrt:api-ms-win-crt-heap-l1-1-0.dll
- 0002:00005890       __NULL_IMPORT_DESCRIPTOR   10022890     kernel32:KERNEL32.dll
+ 0002:000028d4       ??_C@_0BP@GKEGPJNJ@Wpisz?5?$CDgo?5aby?5rozpoczac?5runde?$CB@ 1001f8d4     LPackets.obj
+ 0002:000028f4       ??_C@_0BI@HCPJLGHJ@Type?5?$CDgo?5to?5start?5round@ 1001f8f4     LPackets.obj
+ 0002:0000290c       ??_C@_0CK@KHLJMNMB@Trick?5?$CILeft?5window?$CJ?5X?$DN?$CFd?5Y?$DN?$CFd?0?5@ 1001f90c     LPackets.obj
+ 0002:00002938       ??_C@_0BA@LCFIAAPJ@Character?5Stats@ 1001f938     LPackets.obj
+ 0002:00002948       ??_C@_06MDGMEDAG@Quests@   1001f948     LPackets.obj
+ 0002:00002950       ??_C@_0EB@IJBANDDD@HACK?3?5?$CFs?5?$CI?$CK?$CFs?$CJ?5used?5Polish?5GA?5T@ 1001f950     LPackets.obj
+ 0002:00002994       ??_C@_0CM@KMLCEALJ@Trick?5?$CIRight?5window?$CJ?5X?$DN?$CFd?5Y?$DN?$CFd?0@ 1001f994     LPackets.obj
+ 0002:000029c0       ??_C@_09KNKLKLHB@Inventory@ 1001f9c0     LPackets.obj
+ 0002:000029cc       ??_C@_0L@DKCODMCI@Skill?5Tree@ 1001f9cc     LPackets.obj
+ 0002:000029d8       ??_C@_0BA@OONJAKCH@OnRunToLocation@ 1001f9d8     LPackets.obj
+ 0002:000029e8       ??_C@_0CK@NGDDOBIL@Didn?8t?5find?5a?5PlayerData?0?5funct@ 1001f9e8     LPackets.obj
+ 0002:00002a18       ??_C@_0EH@PBEPHMPL@HACK?3?5?$CFs?5?$CI?$CK?$CFs?$CJ?5tryed?5to?5move?5wh@ 1001fa18     LPackets.obj
+ 0002:00002a60       ??_C@_0BG@NGDJNAKN@OnPartyRelationChange@ 1001fa60     LParty.obj
+ 0002:00002a78       ??_C@_0FA@FHNAIMPE@C?3?2Users?2android?9jo08lemn?2Docum@ 1001fa78     LParty.obj
+ 0002:00002ac8       ??_C@_0N@JNOGLKCG@D2Client?4DLL@ 1001fac8     Offset.obj
+ 0002:00002ad8       ??_C@_0N@PMOCGBNF@D2Common?4DLL@ 1001fad8     Offset.obj
+ 0002:00002ae8       ??_C@_09OIGHMPCC@D2Gfx?4DLL@ 1001fae8     Offset.obj
+ 0002:00002af4       ??_C@_0L@DLLLAELF@D2Lang?4DLL@ 1001faf4     Offset.obj
+ 0002:00002b00       ??_C@_09LHBLGPGG@D2Win?4DLL@ 1001fb00     Offset.obj
+ 0002:00002b0c       ??_C@_09LBACAOOP@D2Net?4DLL@ 1001fb0c     Offset.obj
+ 0002:00002b18       ??_C@_0L@MFMOCBPO@D2Game?4DLL@ 1001fb18     Offset.obj
+ 0002:00002b24       ??_C@_0N@PJLNMLED@D2Launch?4DLL@ 1001fb24     Offset.obj
+ 0002:00002b34       ??_C@_07FCOLMCLA@Fog?4DLL@ 1001fb34     Offset.obj
+ 0002:00002b3c       ??_C@_0N@BMEDKJIO@BNClient?4DLL@ 1001fb3c     Offset.obj
+ 0002:00002b4c       ??_C@_09GKIEHNCI@Storm?4DLL@ 1001fb4c     Offset.obj
+ 0002:00002b58       ??_C@_09ICHJBHEP@D2Cmp?4DLL@ 1001fb58     Offset.obj
+ 0002:00002b64       ??_C@_0M@OJGKHILE@D2Multi?4DLL@ 1001fb64     Offset.obj
+ 0002:00002b70       ??_C@_0M@PFCHPLFO@D2Sound?4DLL@ 1001fb70     Offset.obj
+ 0002:00002b7c       ??_C@_09LKIJMCEJ@D2Gdi?4dll@ 1001fb7c     Offset.obj
+ 0002:00002b88       ??_C@_0M@EEMFLJAI@D2DDraw?4dll@ 1001fb88     Offset.obj
+ 0002:00002b94       ??_C@_0P@HJNKNJNN@D2Direct3D?4dll@ 1001fb94     Offset.obj
+ 0002:00002ba4       ??_C@_0M@KLCMIDPK@D2Glide?4dll@ 1001fba4     Offset.obj
+ 0002:00002bb0       ??_C@_0N@PPODABPK@d2server?4dll@ 1001fbb0     Offset.obj
+ 0002:00002bc0       ??_C@_0CG@MOGAHGDO@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5NODESEX?5CRASH?5LOG?5?$DN?$DN?$DN?$DN@ 1001fbc0     D2Stubs.obj
+ 0002:00002be8       ??_C@_0BC@BADGCKIG@pNode?9?$DOpUnit?5?$DN?5?$CFd@ 1001fbe8     D2Stubs.obj
+ 0002:00002bfc       ??_C@_0BK@HEBEPDKN@?7pNode?9?$DOpUnit?9?$DOdwType?3?5?$CFs@ 1001fbfc     D2Stubs.obj
+ 0002:00002c18       ??_C@_0BN@GCECKDAE@?7pNode?9?$DOpUnit?9?$DOdwClassId?3?5?$CFd@ 1001fc18     D2Stubs.obj
+ 0002:00002c38       ??_C@_0BL@GGGMIFNJ@?7pNode?9?$DOpUnit?9?$DONodeIdx?3?5?$CFd@ 1001fc38     D2Stubs.obj
+ 0002:00002c54       ??_C@_0BN@GAAEAMFP@?7pNode?5location?3?5?$CFd?5?$FL?$CFd?0?5?$CFd?$FN@ 1001fc54     D2Stubs.obj
+ 0002:00002c74       ??_C@_0BP@PGCFOIAG@?7p?5Node?5location?5is?5unknown?$CB?$CB?$CB@ 1001fc74     D2Stubs.obj
+ 0002:00002c94       ??_C@_0O@GCDIBJCP@pNode?5?$DN?$DN?5NULL@ 1001fc94     D2Stubs.obj
+ 0002:00002ca4       ??_C@_0O@PEBLLFOH@pMonster?5?$DN?5?$CFd@ 1001fca4     D2Stubs.obj
+ 0002:00002cb4       ??_C@_0BG@GGPICAIN@?7pMonster?9?$DOdwType?3?5?$CFs@ 1001fcb4     D2Stubs.obj
+ 0002:00002ccc       ??_C@_0BJ@FJKGNNHJ@?7pMonster?9?$DOdwClassId?3?5?$CFd@ 1001fccc     D2Stubs.obj
+ 0002:00002ce8       ??_C@_0BH@FNBAEJMC@?7pMonster?9?$DONodeIdx?3?5?$CFd@ 1001fce8     D2Stubs.obj
+ 0002:00002d00       ??_C@_0CA@IAFAFOID@?7pMonster?5location?3?5?$CFd?5?$FL?$CFd?0?5?$CFd?$FN@ 1001fd00     D2Stubs.obj
+ 0002:00002d20       ??_C@_0CI@DMELPHBP@?7p?5NodetpMonster?5location?5is?5un@ 1001fd20     D2Stubs.obj
+ 0002:00002d48       ??_C@_0BB@LLFAIFOF@pMonster?5?$DN?$DN?5NULL@ 1001fd48     D2Stubs.obj
+ 0002:00002d5c       ??_C@_0CC@HDNIKMGB@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5Dump?5of?5old?5nodes?5?$DN?$DN?$DN?$DN@ 1001fd5c     D2Stubs.obj
+ 0002:00002d80       ??_C@_0P@HCCIDMBN@NODES?$FL?$CFd?$FN?5?$DN?5?$CFd@ 1001fd80     D2Stubs.obj
+ 0002:00002d90       ??_C@_0BM@GLGFIAC@Found?5non?5null?5old?5node?$CB?$CB?$CB?$CB@ 1001fd90     D2Stubs.obj
+ 0002:00002dac       ??_C@_0BD@PNDMEJPA@?7pNode?9?$DOdwType?3?5?$CFs@ 1001fdac     D2Stubs.obj
+ 0002:00002dc0       ??_C@_0BG@CNLJPAKG@?7pNode?9?$DOdwClassId?3?5?$CFd@ 1001fdc0     D2Stubs.obj
+ 0002:00002dd8       ??_C@_0BE@HDDPIACK@?7pNode?9?$DONodeIdx?3?5?$CFd@ 1001fdd8     D2Stubs.obj
+ 0002:00002dec       ??_C@_0CC@HMBKJMMK@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5Dump?5of?5new?5nodes?5?$DN?$DN?$DN?$DN@ 1001fdec     D2Stubs.obj
+ 0002:00002e10       ??_C@_0BC@PNAICLDH@NEWNODES?$FL?$CFd?$FN?5?$DN?5?$CFd@ 1001fe10     D2Stubs.obj
+ 0002:00002e24       ??_C@_0BJ@DHMKJJGB@pGame?9?$DOpLRosterData?50x?$CFx@ 1001fe24     D2Stubs.obj
+ 0002:00002e40       ??_C@_0BI@IHKEPJBG@pGame?9?$DOdwGameState?50x?$CFx@ 1001fe40     D2Stubs.obj
+ 0002:00002e58       ??_C@_0BK@GOJKEDFO@pGame?9?$DObSpawnedClone?50x?$CFx@ 1001fe58     D2Stubs.obj
+ 0002:00002e74       ??_C@_0BC@GNDCDKEK@Warden?5clients?5?$CFd@ 1001fe74     D2Stubs.obj
+ 0002:00002e88       ??_C@_0CJ@FDLLHKBN@?$DN?$DN?$DN?5Dump?5of?5players?5in?5current?5@ 1001fe88     D2Stubs.obj
+ 0002:00002eb4       ??_C@_0CD@KMKDDILA@?$CFd?5?3?5?$CFs?0?5?$CFs?0?5InitStatus?5?$CFd?0?5act@ 1001feb4     D2Stubs.obj
+ 0002:00002ed8       ??_C@_0BP@NDLIDOM@?7pPlayer?5location?3?5?$CFd?5?$FL?$CFd?0?5?$CFd?$FN@ 1001fed8     D2Stubs.obj
+ 0002:00002ef8       ??_C@_0BA@DIMLKLOC@?7Player?5node?5?$CFd@ 1001fef8     D2Stubs.obj
+ 0002:00002f08       ??_C@_0CF@KBLGIIPM@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?5Now?5game?5will?5crash?5@ 1001ff08     D2Stubs.obj
+ 0002:00002f30       ??_C@_0BM@JNNAJMFA@D2ASMFuncs?3?3D2GAME_FindUnit@ 1001ff30     D2Stubs.obj
+ 0002:00002f50       ??_C@_0FB@HPLMFKPN@C?3?2Users?2android?9jo08lemn?2Docum@ 1001ff50     D2Stubs.obj
+ 0002:00002fa4       ??_C@_0BE@BMJGLBEA@EVENTS_SendClanInfo@ 1001ffa4     LEvents.obj
+ 0002:00002fb8       ??_C@_0FB@JJLJHBFM@C?3?2Users?2android?9jo08lemn?2Docum@ 1001ffb8     LEvents.obj
+ 0002:0000300c       ??_C@_09CFNGDEDF@D2ExClans@ 1002000c     LEvents.obj
+ 0002:00003018       ??_C@_0BJ@FOCFFJKM@EVENTS_BroadcastClanInfo@ 10020018     LEvents.obj
+ 0002:00003034       ??_C@_0DJ@MMEECGCC@NEWCLIENT?3?5Failed?5to?5find?5a?5cli@ 10020034     LEvents.obj
+ 0002:00003070       ??_C@_02BINJDKOC@?5?9@     10020070     LEvents.obj
+ 0002:00003074       ??_C@_0CE@PCJKBJNE@Tryb?5FFA?5jest?5w?$LD?$LJczony?5na?5tej?5g@ 10020074     LEvents.obj
+ 0002:00003098       ??_C@_0BO@CBANEBIO@Free?5For?5All?5Mode?5Is?5Enabled?$CB@ 10020098     LEvents.obj
+ 0002:000030b8       ??_C@_01GOHFPIOK@m@        100200b8     LEvents.obj
+ 0002:000030bc       ??_C@_0CF@KDDLBIOJ@Ustawiono?5identyfikator?5mapy?5na@ 100200bc     LEvents.obj
+ 0002:000030e4       ??_C@_0BF@KGLCBJGG@Custom?5Map?5Id?5?3?5?8?$CFd?8@ 100200e4     LEvents.obj
+ 0002:000030fc       ??_C@_01PFHFFBPC@t@        100200fc     LEvents.obj
+ 0002:00003100       ??_C@_0BE@OKAAIFNI@?$PPc?$DLTryb?5turniejowy?$CB@ 10020100     LEvents.obj
+ 0002:00003114       ??_C@_0BE@JIAJDNLA@?$PPc?$DLTournament?5Mode?$CB@ 10020114     LEvents.obj
+ 0002:00003128       ??_C@_07KGJAJMK@SNIPER?$CB@ 10020128     LEvents.obj
+ 0002:00003130       ??_C@_08FFPPJJAD@SNAJPER?$CB@ 10020130     LEvents.obj
+ 0002:0000313c       ??_C@_04JCLGJEIG@LOL?$CB@  1002013c     LEvents.obj
+ 0002:00003144       ??_C@_0DF@GNHBKLLJ@OnGameJoin?3?5Didn?8t?5find?5a?5unit?$CB@ 10020144     LEvents.obj
+ 0002:0000317c       ??_C@_0L@NKCMCCMK@Round?5end?$CB@ 1002017c     LEvents.obj
+ 0002:00003188       ??_C@_0BC@MPEEKECB@Runda?5zakonczona?$CB@ 10020188     LEvents.obj
+ 0002:000031a0       ??_C@_0FA@EPJPODKB@C?3?2Users?2android?9jo08lemn?2Docum@ 100201a0     LItems.obj
+ 0002:000031f0       ??_C@_08IKACDCA@?$CDicreate@ 100201f0     LItems.obj
+ 0002:000031fc       ??_C@_0CM@DHDEJDKL@?$CDicreate?5?$DMicode?$DO?5?$DMiquality?5?$FL4?$FN?$DO@ 100201fc     LItems.obj
+ 0002:00003228       ??_C@_0BE@LEODPOEC@Cannot?5get?5item?5idx@ 10020228     LItems.obj
+ 0002:0000323c       ??_C@_0BH@JIKLPHMP@FindFreeCoords?5failed?$CB@ 1002023c     LItems.obj
+ 0002:00003254       ??_C@_0CH@IFNBDDNJ@Item?$CIs?$CJ?5created?0?5dropping?5to?5gr@ 10020254     LItems.obj
+ 0002:0000327c       ??_C@_06MPBFCLID@?$CDidupe@ 1002027c     LItems.obj
+ 0002:00003284       ??_C@_0BI@MCGINCHD@Put?5Item?5On?5The?5Cursor?$CB@ 10020284     LItems.obj
+ 0002:0000329c       ??_C@_0CE@FGKJLFIN@Item?5created?0?5dropping?5to?5groun@ 1002029c     LItems.obj
+ 0002:000032c0       ??_C@_08JLBCNGIM@?$CDiperson@ 100202c0     LItems.obj
+ 0002:000032cc       ??_C@_0BE@PINGIHC@?$CDiperson?5?$DMcharname?$DO@ 100202cc     LItems.obj
+ 0002:000032e0       ??_C@_0O@FEOMFKBG@Max?515?5chars?$CB@ 100202e0     LItems.obj
+ 0002:000032f0       ??_C@_03FCEJEFGF@Ok?4@     100202f0     LItems.obj
+ 0002:000032f4       ??_C@_0L@CPJNIEEH@?$CDiunperson@ 100202f4     LItems.obj
+ 0002:00003300       ??_C@_03BNBOJICL@?$CDiq@   10020300     LItems.obj
+ 0002:00003308       ??_C@_0FG@NLABIANA@1?5?$DN?5cracked?52?5?$DN?5normal?53?5?$DN?5supe@ 10020308     LItems.obj
+ 0002:00003360       ??_C@_05EFOEIMO@?$CDirem@  10020360     LItems.obj
+ 0002:00003368       ??_C@_0CK@NOJJHLHF@?$CDirem?5?$DMcharname?$DO?5?$DMitemcode?$DO?5?$DMit@ 10020368     LItems.obj
+ 0002:00003394       ??_C@_0BF@PCCPLKKM@Player?5isn?8t?5in?5game@ 10020394     LItems.obj
+ 0002:000033ac       ??_C@_0BE@LBOGKGFI@Player?5isn?8t?5inited@ 100203ac     LItems.obj
+ 0002:000033c0       ??_C@_0BM@KOMJAIOD@?$CDirem?5?$DMcharname?$DO?5?$DMitemcode?$DO@ 100203c0     LItems.obj
+ 0002:000033dc       ??_C@_0BH@JPJGLFIH@Cannot?5find?5inventory?$CB@ 100203dc     LItems.obj
+ 0002:000033f4       ??_C@_0BN@MFMDMBDE@Deleted?5an?5item?5?8?$CFs?5from?5?$CFs?8@ 100203f4     LItems.obj
+ 0002:00003414       ??_C@_03GFOKOIPI@?$CDic@   10020414     LItems.obj
+ 0002:00003418       ??_C@_0CG@MOKANCEP@Type?5item?5code?5?$CI3?5chars?5aqv?5?$DN?5a@ 10020418     LItems.obj
+ 0002:00003440       ??_C@_05HPOHLPLI@?$CDipre@ 10020440     LItems.obj
+ 0002:00003448       ??_C@_0BB@GNCHILPF@Type?5item?5prefix@ 10020448     LItems.obj
+ 0002:0000345c       ??_C@_05DLMECFMD@?$CDisut@ 1002045c     LItems.obj
+ 0002:00003464       ??_C@_0BB@BMEKBPOC@Type?5item?5sutfix@ 10020464     LItems.obj
+ 0002:00003478       ??_C@_05PBLAFKJC@?$CDiuni@ 10020478     LItems.obj
+ 0002:00003480       ??_C@_0BC@OJAGKFKE@Type?5number?50?9400@ 10020480     LItems.obj
+ 0002:00003494       ??_C@_0BF@BIOPIOAP@Item?5must?5be?5unique?$CB@ 10020494     LItems.obj
+ 0002:000034ac       ??_C@_05JGPCGBMB@?$CDiadd@ 100204ac     LItems.obj
+ 0002:000034b4       ??_C@_0CE@FHHBPFND@Type?5number?50?9358?0?5ItemStatCost@ 100204b4     LItems.obj
+ 0002:000034d8       ??_C@_0L@LDDPNHLC@Type?5value@ 100204d8     LItems.obj
+ 0002:000034e4       ??_C@_0CK@HMIHIKM@Added?5Stat?5No?5?$CFd?0?5value?5?$CFd?0?5?$CFd?5@ 100204e4     LItems.obj
+ 0002:00003510       ??_C@_0M@IHCGBNIG@?$CDmspawntest@ 10020510     LMonsters.obj
+ 0002:0000351c       ??_C@_0BI@EIAFEOBG@Type?5monster?5index?50?9?$CFd@ 1002051c     LMonsters.obj
+ 0002:00003534       ??_C@_05NIOMGKKC@Done?$CB@ 10020534     LMonsters.obj
+ 0002:0000353c       ??_C@_0CB@DDGKNFIL@D2GAME_FindMonsterRoom?$CI?$CJ?5failed@ 1002053c     LMonsters.obj
+ 0002:00003560       ??_C@_07FKHLFPDM@?$CDmspawn@ 10020560     LMonsters.obj
+ 0002:00003568       ??_C@_0BC@NCNIOHNA@Type?5number?50?9733@ 10020568     LMonsters.obj
+ 0002:0000357c       ??_C@_0BH@GBELGIGG@Spawning?5monster?5on?5?$CFs@ 1002057c     LMonsters.obj
+ 0002:00003594       ??_C@_0BG@GMMLEPCF@Error?5limit?5exceeded?$CB@ 10020594     LMonsters.obj
+ 0002:000035ac       ??_C@_0BN@BEAIALBC@?$CD?$CFd?5Monster?5spawned?0?5HP?5?$DN?5?$CFd@ 100205ac     LMonsters.obj
+ 0002:000035cc       ??_C@_0BC@NHMFKHLJ@QUESTS_UpdateUnit@ 100205cc     LQuests.obj
+ 0002:000035e0       ??_C@_0FB@ILBPFJOM@C?3?2Users?2android?9jo08lemn?2Docum@ 100205e0     LQuests.obj
+ 0002:00003634       ??_C@_0BC@PODIOPO@QUESTS_OpenPortal@ 10020634     LQuests.obj
+ 0002:00003648       ??_C@_0CC@JFKBPDIO@Invalid?5level?5id?5for?5portal?$CB?5?$CI?$CF@ 10020648     LQuests.obj
+ 0002:00003670       ??_C@_0FB@PNJLFIPB@C?3?2Users?2android?9jo08lemn?2Docum@ 10020670     LRoster.obj
+ 0002:000036c4       ??_C@_06KPKGBFFD@NextDC@   100206c4     LWorldEvent.obj
+ 0002:000036cc       ??_C@_0M@PAPHILHM@World?5Event@ 100206cc     LWorldEvent.obj
+ 0002:000036d8       ??_C@_0CF@EJIAGFBN@The?5World?5Event?5Key?5has?5been?5cr@ 100206d8     LWorldEvent.obj
+ 0002:00003700       ??_C@_09FEKFGPGE@SellCount@ 10020700     LWorldEvent.obj
+ 0002:0000370c       ?default_seed@?$mersenne_twister_engine@I$0CA@$0CHA@$0BIN@$0BP@$0JJAILANP@$0L@$0PPPPPPPP@$06$0JNCMFGIA@$0P@$0OPMGAAAA@$0BC@$0GMAHIJGF@@random@boost@@2IB 1002070c     LWorldEvent.obj
+ 0002:00003710       ??_C@_0FB@LBIHBDJK@C?3?2Users?2android?9jo08lemn?2Docum@ 10020710     NodesEx.obj
+ 0002:00003764       ??_C@_0BN@FMOGBFIO@No?5memory?5to?5allocate?5a?5node@ 10020764     NodesEx.obj
+ 0002:00003788       ??_C@_0EC@CDNKPELE@NodesEX?3?5nClients?$DN?$CFd?5?$DM?$DN?5wcfgMax@ 10020788     NodesEx.obj
+ 0002:000037cc       ??_C@_0CG@HDNAJHIF@NodesEx?3?5No?5memory?5to?5allocate?5@ 100207cc     NodesEx.obj
+ 0002:000037f4       ??_C@_0M@PKMMMKFH@ExpCallback@ 100207f4     PartyExp.obj
+ 0002:00003800       ??_C@_0FC@FHMOJOAF@C?3?2Users?2android?9jo08lemn?2Docum@ 10020800     PartyExp.obj
+ 0002:00003854       ??_C@_0BH@NDLJHDHF@nMember?$DOwcfgMaxPlayers@ 10020854     PartyExp.obj
+ 0002:0000386c       ??_C@_0DM@FCAEEACP@Critical?5error?5?8?$CFs?8?5in?5line?5?$CFd?0@ 1002086c     PartyExp.obj
+ 0002:000038a8       ??_C@_0CC@LMNGPFIL@You?5already?5are?5watching?5someon@ 100208a8     LSpectator.obj
+ 0002:000038cc       ??_C@_0BO@GNLKJLNO@You?5cannot?5watch?5a?5spectator?$CB@ 100208cc     LSpectator.obj
+ 0002:000038ec       ??_C@_0BL@KMOGHFDO@You?5cannot?5watch?5yourself?$CB@ 100208ec     LSpectator.obj
+ 0002:00003908       ??_C@_0DA@BJDFCPLC@You?5cannot?5watch?5a?5dead?5player?5@ 10020908     LSpectator.obj
+ 0002:00003938       ??_C@_0O@NKNMEGII@list?5too?5long@ 10020938     LSpectator.obj
+ 0002:00003948       ??_C@_0M@BDNOJJJD@UNIT_PLAYER@ 10020948     Misc.obj
+ 0002:00003954       ??_C@_0N@HNOEDCKN@UNIT_MONSTER@ 10020954     Misc.obj
+ 0002:00003964       ??_C@_09GLICHAPO@UNIT_ITEM@ 10020964     Misc.obj
+ 0002:00003970       ??_C@_0N@JFNCGIJ@UNIT_MISSILE@ 10020970     Misc.obj
+ 0002:00003980       ??_C@_0M@IHIKBGMG@UNIT_OBJECT@ 10020980     Misc.obj
+ 0002:0000398c       ??_C@_0O@CFPGFNID@UNKNOWN_UNIT?$CB@ 1002098c     Misc.obj
+ 0002:0000399c       ??_C@_0M@FJGJGPOM@?2Colors?4ini@ 1002099c     Misc.obj
+ 0002:000039a8       ??_C@_06ICDCBJPI@Colors@   100209a8     Misc.obj
+ 0002:000039b0       ??_C@_08HPNLODAH@whatever@ 100209b0     Misc.obj
+ 0002:000039bc       ??_C@_06IKLLLDHL@normal@   100209bc     Misc.obj
+ 0002:000039c4       ??_C@_08BLIHFJDI@superior@ 100209c4     Misc.obj
+ 0002:000039d0       ??_C@_05PBCCBLFE@magic@    100209d0     Misc.obj
+ 0002:000039d8       ??_C@_04HGKKAIPH@rare@     100209d8     Misc.obj
+ 0002:000039e0       ??_C@_06ODCMFGLL@unique@   100209e0     Misc.obj
+ 0002:000039e8       ??_C@_07MBEEIIHN@crafted@  100209e8     Misc.obj
+ 0002:000039f0       ??_C@_08BCJIMAPB@tempered@ 100209f0     Misc.obj
+ 0002:000039fc       ??_C@_03IKGEINEE@?$CFs?5@  100209fc     Misc.obj
+ 0002:00003a00       ??_C@_02OEPNLDDP@GS@       10020a00     Misc.obj
+ 0002:00003a04       ??_C@_05NILPPCBL@?$PPc1GS@ 10020a04     Misc.obj
+ 0002:00003a0c       ??_C@_02DKCKIIND@?$CFs@    10020a0c     Misc.obj
+ 0002:00003a10       ??_C@_0DI@NJDANNCE@NULL?5address?5error?5while?5patchi@ 10020a10     Misc.obj
+ 0002:00003a48       ??_C@_0CB@JOMHFMDM@Cannot?5write?5bytes?5for?5patch?3?5?$CF@ 10020a48     Misc.obj
+ 0002:00003a6c       ??_C@_01OGPIMHDM@?$DP@     10020a6c     Misc.obj
+ 0002:00003a70       ??_C@_0P@KHENEFN@?$DP?5?9?5tell?5lolet@ 10020a70     Misc.obj
+ 0002:00003a80       ??_C@_06CMKAJGPJ@Amazon@   10020a80     Misc.obj
+ 0002:00003a88       ??_C@_09BMNBPCGJ@Sorceress@ 10020a88     Misc.obj
+ 0002:00003a94       ??_C@_0M@OEPIPDJH@Necromancer@ 10020a94     Misc.obj
+ 0002:00003aa0       ??_C@_07DBGCNDAP@Paladin@  10020aa0     Misc.obj
+ 0002:00003aa8       ??_C@_09ILIBCODF@Barbarian@ 10020aa8     Misc.obj
+ 0002:00003ab4       ??_C@_05EDJAKLCL@Druid@    10020ab4     Misc.obj
+ 0002:00003abc       ??_C@_08JHGIFPME@Assassin@ 10020abc     Misc.obj
+ 0002:00003ac8       ??_C@_03BBKEAIF@?$DP?$DP?$DP@ 10020ac8     Misc.obj
+ 0002:00003acc       ??_C@_0CA@DAJKIHOF@?$FL?$CF04d?9?$CF02d?9?$CF02d?5?$CF02d?3?$CF02d?3?$CF02d?$FN@ 10020acc     Misc.obj
+ 0002:00003aec       ??_C@_02DPNLHKJD@a?$CL@    10020aec     Misc.obj
+ 0002:00003af0       ??_C@_0N@CIFNGJMJ@d2warden?4log@ 10020af0     Misc.obj
+ 0002:00003b00       ??_C@_08EPJLHIJG@bad?5cast@ 10020b00     Misc.obj
+ 0002:00003b10       ??_7bad_cast@std@@6B@      10020b10     Misc.obj
+ 0002:00003b18       ??_C@_02LMMGGCAJ@?3?5@     10020b18     Warden.obj
+ 0002:00003b1c       ??_C@_09FHHIKOEA@Clans?4ini@ 10020b1c     Warden.obj
+ 0002:00003b28       ??_C@_0CF@NOLGCLIN@3ea42f5ac80f0d2deb35d99b4e9a780@ 10020b28     Warden.obj
+ 0002:00003b50       ??_C@_0BB@IIBBOEKF@WardenBy_Marsgod@ 10020b50     Warden.obj
+ 0002:00003b64       ??_C@_08BHAELNAF@23?348?344@ 10020b64     Warden.obj
+ 0002:00003b70       ??_C@_0M@LOHGIPH@Oct?521?52024@ 10020b70     Warden.obj
+ 0002:00003b80       ??_C@_0EH@PPLBDBIM@Warden?5ver?4?52?40?5build?5?$CFd?5?$CI?$CFs?$CJ?5b@ 10020b80     Warden.obj
+ 0002:00003bc8       ??_C@_0CD@FMGEFN@Setting?5allowed?5player?5limit?5on@ 10020bc8     Warden.obj
+ 0002:00003bec       ??_C@_0BB@KOLPDEFP@Patching?5game?4?4?4@ 10020bec     Warden.obj
+ 0002:00003c00       ??_C@_0CI@KBGEBDMA@Incorrect?5name?5of?5module?5?8?$CFs?8?5?$CI@ 10020c00     Warden.obj
+ 0002:00003c28       ??_C@_02JDPG@rb@           10020c28     Warden.obj
+ 0002:00003c2c       ??_C@_0CC@EJNCHDIL@Cannot?5find?5module?5filename?5?8?$CFs@ 10020c2c     Warden.obj
+ 0002:00003c50       ??_C@_0BL@PCEIIFHP@Incorrect?5module?5size?5?$CI?$CFd?$CJ@ 10020c50     Warden.obj
+ 0002:00003c6c       ??_C@_0BF@KEJOEFHP@Damaged?5module?5file?$CB@ 10020c6c     Warden.obj
+ 0002:00003c84       ??_C@_0CC@GGAFENNN@Module?5?8?$CFs?8?5has?5loaded?5correctl@ 10020c84     Warden.obj
+ 0002:00003ca8       ??_C@_0BB@LPEKFPDC@Shutting?5down?4?4?4@ 10020ca8     Warden.obj
+ 0002:00003cc0       ??_C@_0EL@NFDNLDAP@WardenPacket?3?5Unexpected?5packet@ 10020cc0     Warden.obj
+ 0002:00003d0c       ??_C@_0DM@PHPMFINA@Dropping?5connection?5with?5?8?$CFs?8?0?5@ 10020d0c     Warden.obj
+ 0002:00003d48       ??_C@_0EK@FILBENLC@Dropping?5connection?5with?5?8?$CFs?8?0?5@ 10020d48     Warden.obj
+ 0002:00003d94       ??_C@_0O@GGBBHPJF@?2D2Warden?4ini@ 10020d94     Warden.obj
+ 0002:00003da4       ??_C@_03FEKMCBF@1?05@      10020da4     Warden.obj
+ 0002:00003da8       ??_C@_0O@LJHBCPAH@AllowTeleport@ 10020da8     Warden.obj
+ 0002:00003db8       ??_C@_06MFHNLHFO@Warden@   10020db8     Warden.obj
+ 0002:00003dc0       ??_C@_02KEGNLNML@?0?5@     10020dc0     Warden.obj
+ 0002:00003dc4       ??_C@_0M@LICFDHIA@D2ExVersion@ 10020dc4     Warden.obj
+ 0002:00003dd0       ??_C@_0BA@JFGDGPNI@EnableSpectator@ 10020dd0     Warden.obj
+ 0002:00003de0       ??_C@_0P@PMDOCAHD@AddKillerClass@ 10020de0     Warden.obj
+ 0002:00003df0       ??_C@_0N@HHFFOEOF@AutoIdentify@ 10020df0     Warden.obj
+ 0002:00003e00       ??_C@_0N@JLODBIJB@HostileLevel@ 10020e00     Warden.obj
+ 0002:00003e10       ??_C@_0N@BHEFMJFP@RespawnTimer@ 10020e10     Warden.obj
+ 0002:00003e20       ??_C@_0BE@NACKICKO@DisableHostileDelay@ 10020e20     Warden.obj
+ 0002:00003e34       ??_C@_0O@NGOHFIBE@AllowTourMode@ 10020e34     Warden.obj
+ 0002:00003e44       ??_C@_0N@HKHMDNL@AllowVanilla@ 10020e44     Warden.obj
+ 0002:00003e54       ??_C@_07BDFJEBLI@AllowGU@  10020e54     Warden.obj
+ 0002:00003e5c       ??_C@_07BNIGICBD@AllowHB@  10020e5c     Warden.obj
+ 0002:00003e64       ??_C@_09JBMPMPCN@AllowNLWW@ 10020e64     Warden.obj
+ 0002:00003e70       ??_C@_07GPGHBEEK@LogChat@  10020e70     Warden.obj
+ 0002:00003e78       ??_C@_0BA@KNILMDHC@ResDumpInterval@ 10020e78     Warden.obj
+ 0002:00003e88       ??_C@_0L@INDPAOFE@MaxPlayers@ 10020e88     Warden.obj
+ 0002:00003e94       ??_C@_0L@JINEJHAP@MoveToTown@ 10020e94     Warden.obj
+ 0002:00003ea0       ??_C@_0BA@EEEOGHHO@DontDropEarGold@ 10020ea0     Warden.obj
+ 0002:00003eb0       ??_C@_09LAJKPJDJ@StrBugFix@ 10020eb0     Warden.obj
+ 0002:00003ebc       ??_C@_07CICPFMF@FFAMode@   10020ebc     Warden.obj
+ 0002:00003ec4       ??_C@_0BB@BLMPDBMG@EnableSeedChange@ 10020ec4     Warden.obj
+ 0002:00003ed8       ??_C@_09FNCBEPFA@AllowD2Ex@ 10020ed8     Warden.obj
+ 0002:00003ee4       ??_C@_0M@KHGCLLNO@DetectTrick@ 10020ee4     Warden.obj
+ 0002:00003ef0       ??_C@_08HFNBMCGB@ExpRange@ 10020ef0     Warden.obj
+ 0002:00003efc       ??_C@_0BD@CFBLOEKM@DisableRepairCosts@ 10020efc     Warden.obj
+ 0002:00003f10       ??_C@_0M@DKEJJHHF@AllowQuests@ 10020f10     Warden.obj
+ 0002:00003f1c       ??_C@_0P@PMLGHLL@EnableLevelCmd@ 10020f1c     Warden.obj
+ 0002:00003f2c       ??_C@_0BA@DJJNLNPB@EnableClassicWW@ 10020f2c     Warden.obj
+ 0002:00003f3c       ??_C@_0BK@CJMAFNLH@AllowPierceBreakImmunites@ 10020f3c     Warden.obj
+ 0002:00003f58       ??_C@_0BA@CGANCCJJ@MagicPierceStat@ 10020f58     Warden.obj
+ 0002:00003f68       ??_C@_0BD@JEEEOHLL@PhysicalPierceStat@ 10020f68     Warden.obj
+ 0002:00003f7c       ??_C@_0L@DBBEGGAE@MaxFireRes@ 10020f7c     Warden.obj
+ 0002:00003f88       ??_C@_0L@BOJIBHAB@MaxColdRes@ 10020f88     Warden.obj
+ 0002:00003f94       ??_C@_09OAPHLPHI@MaxPsnRes@ 10020f94     Warden.obj
+ 0002:00003fa0       ??_C@_0M@CEMOBFBN@MaxLightRes@ 10020fa0     Warden.obj
+ 0002:00003fac       ??_C@_09EHKKAGDP@MaxDmgRes@ 10020fac     Warden.obj
+ 0002:00003fb8       ??_C@_09MEMNECON@UpdateURL@ 10020fb8     Warden.obj
+ 0002:00003fc4       ??_C@_03HPADHAHE@N?1A@     10020fc4     Warden.obj
+ 0002:00003fc8       ??_C@_06FFPJKAPA@GSName@   10020fc8     Warden.obj
+ 0002:00003fd0       ??_C@_05JFEAGLCN@LOLET@    10020fd0     Warden.obj
+ 0002:00003fd8       ??_C@_06HCFNNEGK@Admins@   10020fd8     Warden.obj
+ 0002:00003fe0       ??_C@_07DOAOMMKG@Enabled@  10020fe0     Warden.obj
+ 0002:00003fe8       ??_C@_07PPFLDEHD@MinSell@  10020fe8     Warden.obj
+ 0002:00003ff0       ??_C@_07BJDLJLJC@MaxSell@  10020ff0     Warden.obj
+ 0002:00003ff8       ??_C@_09ICACOPLB@InfoDelay@ 10020ff8     Warden.obj
+ 0002:00004004       ??_C@_0CK@KIIABLMM@Invalid?5InfoDelay?5value?4?5Defaul@ 10021004     Warden.obj
+ 0002:00004030       ??_C@_0BB@ODPIHDHL@rin?0?5unique?0?5122@ 10021030     Warden.obj
+ 0002:00004044       ??_C@_07MBELDEGC@Trigger@  10021044     Warden.obj
+ 0002:0000404c       ??_C@_0BB@KAICMDAH@Settings?5loaded?4@ 1002104c     Warden.obj
+ 0002:00004060       ??_C@_0BE@FKJAPMLA@WardenClient?3?3setup@ 10021060     WardenClient.obj
+ 0002:00004078       ??_C@_0FG@KLICMMHD@C?3?2Users?2android?9jo08lemn?2Docum@ 10021078     WardenClient.obj
+ 0002:000040d0       ??_C@_0CJ@BNBBPIOO@Error?5during?5initialization?4?5St@ 100210d0     WardenInit.obj
+ 0002:000040fc       ??_C@_0CB@NGALOAFD@Warden?5initialized?5successfully@ 100210fc     WardenInit.obj
+ 0002:00004120       ??_C@_0BN@MLCBHJOM@Failed?5to?5init?5the?5Warden?5?3?$CI@ 10021120     WardenInit.obj
+ 0002:00004140       ??_C@_0BF@PECNMKDB@Server?5shutting?5down@ 10021140     WardenInit.obj
+ 0002:00004160       __xmm@00000001000000010000000100000001 10021160     LWorldEvent.obj
+ 0002:00004170       __xmm@41f00000000000000000000000000000 10021170     LUberQuest.obj
+ 0002:00004180       __xmm@7ffffffe7ffffffe7ffffffe7ffffffe 10021180     LWorldEvent.obj
+ 0002:00004190       __xmm@80000001800000018000000180000001 10021190     LWorldEvent.obj
+ 0002:000041a0       __xmm@90909090909090909090909090909090 100211a0     D2Patches.obj
+ 0002:000041b0       __xmm@9908b0df9908b0df9908b0df9908b0df 100211b0     LWorldEvent.obj
+ 0002:00004230       __load_config_used         10021230     MSVCRT:loadcfg.obj
+ 0002:00004300       __tls_used                 10021300     MSVCRT:tlssup.obj
+ 0002:00004318       ??_R4type_info@@6B@        10021318     MSVCRT:std_type_info_static.obj
+ 0002:0000432c       ??_R3type_info@@8          1002132c     MSVCRT:std_type_info_static.obj
+ 0002:0000433c       ??_R2type_info@@8          1002133c     MSVCRT:std_type_info_static.obj
+ 0002:00004344       ??_R1A@?0A@EA@type_info@@8 10021344     MSVCRT:std_type_info_static.obj
+ 0002:00004360       ??_R2?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 10021360     D2Handlers.obj
+ 0002:00004378       ??_R2?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 10021378     D2Handlers.obj
+ 0002:00004384       ??_R1A@?0A@EA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 10021384     D2Handlers.obj
+ 0002:000043a0       ??_R2?$basic_ios@DU?$char_traits@D@std@@@std@@8 100213a0     D2Handlers.obj
+ 0002:000043b0       ??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8 100213b0     D2Handlers.obj
+ 0002:000043c0       ??_R1A@A@3FA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 100213c0     D2Handlers.obj
+ 0002:000043dc       ??_R1A@?0A@EA@ios_base@std@@8 100213dc     D2Handlers.obj
+ 0002:000043f8       ??_R17?0A@EA@?$_Iosb@H@std@@8 100213f8     D2Handlers.obj
+ 0002:00004414       ??_R2ios_base@std@@8       10021414     D2Handlers.obj
+ 0002:00004420       ??_R3ios_base@std@@8       10021420     D2Handlers.obj
+ 0002:00004430       ??_R1A@A@3EA@ios_base@std@@8 10021430     D2Handlers.obj
+ 0002:0000444c       ??_R1A@?0A@EA@?$_Iosb@H@std@@8 1002144c     D2Handlers.obj
+ 0002:00004468       ??_R2?$_Iosb@H@std@@8      10021468     D2Handlers.obj
+ 0002:00004470       ??_R3?$_Iosb@H@std@@8      10021470     D2Handlers.obj
+ 0002:00004480       ??_R17A@3EA@?$_Iosb@H@std@@8 10021480     D2Handlers.obj
+ 0002:0000449c       ??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 1002149c     D2Handlers.obj
+ 0002:000044b0       ??_R3?$basic_ostream@DU?$char_traits@D@std@@@std@@8 100214b0     D2Handlers.obj
+ 0002:000044c0       ??_R1A@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 100214c0     D2Handlers.obj
+ 0002:000044dc       ??_R1A@?0A@EA@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 100214dc     D2Handlers.obj
+ 0002:000044f8       ??_R2?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 100214f8     D2Handlers.obj
+ 0002:00004500       ??_R3?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 10021500     D2Handlers.obj
+ 0002:00004510       ??_R1A@?0A@EA@?$basic_streambuf@DU?$char_traits@D@std@@@std@@8 10021510     D2Handlers.obj
+ 0002:0000452c       ??_R1A@?0A@EA@?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 1002152c     D2Handlers.obj
+ 0002:00004548       ??_R3?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 10021548     D2Handlers.obj
+ 0002:00004558       ??_R3?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@8 10021558     D2Handlers.obj
+ 0002:00004568       ??_R4?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ 10021568     D2Handlers.obj
+ 0002:0000457c       ??_R4?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@6B@ 1002157c     D2Handlers.obj
+ 0002:00004590       ??_R1A@?0A@EA@bad_array_new_length@std@@8 10021590     D2Handlers.obj
+ 0002:000045ac       ??_R2bad_array_new_length@std@@8 100215ac     D2Handlers.obj
+ 0002:000045bc       ??_R3bad_array_new_length@std@@8 100215bc     D2Handlers.obj
+ 0002:000045cc       ??_R4bad_array_new_length@std@@6B@ 100215cc     D2Handlers.obj
+ 0002:000045e0       ??_R1A@?0A@EA@bad_alloc@std@@8 100215e0     D2Handlers.obj
+ 0002:000045fc       ??_R2bad_alloc@std@@8      100215fc     D2Handlers.obj
+ 0002:00004608       ??_R3bad_alloc@std@@8      10021608     D2Handlers.obj
+ 0002:00004618       ??_R4bad_alloc@std@@6B@    10021618     D2Handlers.obj
+ 0002:0000462c       ??_R1A@?0A@EA@exception@std@@8 1002162c     D2Handlers.obj
+ 0002:00004648       ??_R2exception@std@@8      10021648     D2Handlers.obj
+ 0002:00004650       ??_R3exception@std@@8      10021650     D2Handlers.obj
+ 0002:00004660       ??_R4exception@std@@6B@    10021660     D2Handlers.obj
+ 0002:00004674       ??_R1A@?0A@EA@bad_cast@std@@8 10021674     Misc.obj
+ 0002:00004690       ??_R2bad_cast@std@@8       10021690     Misc.obj
+ 0002:0000469c       ??_R3bad_cast@std@@8       1002169c     Misc.obj
+ 0002:000046ac       ??_R4bad_cast@std@@6B@     100216ac     Misc.obj
+ 0002:000046c0       ___safe_se_handler_table   100216c0     <linker-defined>
+ 0002:00004760       ___volatile_metadata       10021760     <linker-defined>
+ 0002:00004b48       ___rtc_iaa                 10021b48     MSVCRT:initsect.obj
+ 0002:00004b4c       ___rtc_izz                 10021b4c     MSVCRT:initsect.obj
+ 0002:00004b50       ___rtc_taa                 10021b50     MSVCRT:initsect.obj
+ 0002:00004b54       ___rtc_tzz                 10021b54     MSVCRT:initsect.obj
+ 0002:00004b58       __tls_start                10021b58     MSVCRT:tlssup.obj
+ 0002:00004b5c       __Init_thread_epoch        10021b5c     MSVCRT:thread_safe_statics.obj
+ 0002:00004b60       __tls_end                  10021b60     MSVCRT:tlssup.obj
+ 0002:00005684       __TI2?AVbad_alloc@std@@    10022684     MSVCRT:throw_bad_alloc.obj
+ 0002:00005694       __CTA2?AVbad_alloc@std@@   10022694     MSVCRT:throw_bad_alloc.obj
+ 0002:000056a0       __CT??_R0?AVbad_array_new_length@std@@@8??0bad_array_new_length@std@@QAE@ABV01@@Z12 100226a0     D2Handlers.obj
+ 0002:000056bc       __CT??_R0?AVbad_alloc@std@@@8??0bad_alloc@std@@QAE@ABV01@@Z12 100226bc     D2Handlers.obj
+ 0002:000056d8       __CTA3?AVbad_array_new_length@std@@ 100226d8     D2Handlers.obj
+ 0002:000056e8       __TI3?AVbad_array_new_length@std@@ 100226e8     D2Handlers.obj
+ 0002:000056f8       __CT??_R0?AVexception@std@@@8??0exception@std@@QAE@ABV01@@Z12 100226f8     D2Handlers.obj
+ 0002:00005714       __CT??_R0?AVbad_cast@std@@@8??0bad_cast@std@@QAE@ABV01@@Z12 10022714     Misc.obj
+ 0002:00005730       __CTA2?AVbad_cast@std@@    10022730     Misc.obj
+ 0002:0000573c       __TI2?AVbad_cast@std@@     1002273c     Misc.obj
+ 0002:00005788       __IMPORT_DESCRIPTOR_KERNEL32 10022788     kernel32:KERNEL32.dll
+ 0002:0000579c       __IMPORT_DESCRIPTOR_MSVCP140 1002279c     msvcprt:MSVCP140.dll
+ 0002:000057b0       __IMPORT_DESCRIPTOR_VCRUNTIME140 100227b0     vcruntime:VCRUNTIME140.dll
+ 0002:000057c4       __IMPORT_DESCRIPTOR_api-ms-win-crt-runtime-l1-1-0 100227c4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000057d8       __IMPORT_DESCRIPTOR_api-ms-win-crt-string-l1-1-0 100227d8     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:000057ec       __IMPORT_DESCRIPTOR_api-ms-win-crt-convert-l1-1-0 100227ec     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0002:00005800       __IMPORT_DESCRIPTOR_api-ms-win-crt-stdio-l1-1-0 10022800     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00005814       __IMPORT_DESCRIPTOR_api-ms-win-crt-utility-l1-1-0 10022814     ucrt:api-ms-win-crt-utility-l1-1-0.dll
+ 0002:00005828       __IMPORT_DESCRIPTOR_api-ms-win-crt-time-l1-1-0 10022828     ucrt:api-ms-win-crt-time-l1-1-0.dll
+ 0002:0000583c       __IMPORT_DESCRIPTOR_api-ms-win-crt-heap-l1-1-0 1002283c     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00005850       __NULL_IMPORT_DESCRIPTOR   10022850     kernel32:KERNEL32.dll
  0003:00000204       __Init_global_epoch        10024204     MSVCRT:thread_safe_statics.obj
  0003:00000208       ___scrt_native_dllmain_reason 10024208     MSVCRT:utility.obj
  0003:0000020c       ___security_cookie_complement 1002420c     MSVCRT:gs_cookie.obj
@@ -1709,105 +1708,105 @@
  0002:00000da6       ?_Fake_alloc@std@@3U_Fake_allocator@1@B 1001dda6     Misc.obj
  0002:00000da7       ?_Fake_alloc@std@@3U_Fake_allocator@1@B 1001dda7     Warden.obj
  0002:00000da8       ?_Fake_alloc@std@@3U_Fake_allocator@1@B 1001dda8     WardenClient.obj
- 0002:00004200       _NaN                       10021200     MSVCRT:ftol3.obj
- 0002:00004204       _onept5                    10021204     MSVCRT:ftol3.obj
- 0002:00004208       _DP2to32                   10021208     MSVCRT:ftol3.obj
- 0002:00004208       _Int32ToUInt32             10021208     MSVCRT:ftol3.obj
- 0002:00004ba8       __ehfuncinfo$?OnLastHit@@YGXPAUUnitAny@@0PAUDamage@@@Z 10021ba8     D2Handlers.obj
- 0002:00004bd0       __unwindtable$?OnLastHit@@YGXPAUUnitAny@@0PAUDamage@@@Z 10021bd0     D2Handlers.obj
- 0002:00004c10       __ehfuncinfo$?OnChat@@YIHPAUUnitAny@@PAE@Z 10021c10     D2Handlers.obj
- 0002:00004c38       __unwindtable$?OnChat@@YIHPAUUnitAny@@PAE@Z 10021c38     D2Handlers.obj
- 0002:00004c98       __ehfuncinfo$??A?$map@KPAUUnitAny@@U?$less@K@std@@V?$allocator@U?$pair@$$CBKPAUUnitAny@@@std@@@3@@std@@QAEAAPAUUnitAny@@ABK@Z 10021c98     D2Handlers.obj
- 0002:00004cbc       __unwindtable$??A?$map@KPAUUnitAny@@U?$less@K@std@@V?$allocator@U?$pair@$$CBKPAUUnitAny@@@std@@@3@@std@@QAEAAPAUUnitAny@@ABK@Z 10021cbc     D2Handlers.obj
- 0002:00004cc4       __ehfuncinfo$?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 10021cc4     D2Handlers.obj
- 0002:00004ce8       __unwindtable$?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 10021ce8     D2Handlers.obj
- 0002:00004cf0       __ehfuncinfo$??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 10021cf0     D2Handlers.obj
- 0002:00004d14       __unwindtable$??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 10021d14     D2Handlers.obj
- 0002:00004d24       __ehfuncinfo$?getInstance@Warden@@SAAAV1@XZ 10021d24     D2Handlers.obj
- 0002:00004d48       __unwindtable$?getInstance@Warden@@SAAAV1@XZ 10021d48     D2Handlers.obj
- 0002:00004d50       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 10021d50     D2Handlers.obj
- 0002:00004d74       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 10021d74     D2Handlers.obj
- 0002:00004da4       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 10021da4     D2Handlers.obj
- 0002:00004db8       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z$6 10021db8     D2Handlers.obj
- 0002:00004dc8       __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10021dc8     D2Handlers.obj
- 0002:00004dc8       __ehfuncinfo$??1Warden@@QAE@XZ 10021dc8     Warden.obj
- 0002:00004dc8       __ehfuncinfo$??1WardenClient@@QAE@XZ 10021dc8     WardenClient.obj
- 0002:00004dec       __ehfuncinfo$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10021dec     D2Handlers.obj
- 0002:00004e10       __unwindtable$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10021e10     D2Handlers.obj
- 0002:00004e18       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 10021e18     D2Handlers.obj
- 0002:00004e3c       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 10021e3c     D2Handlers.obj
- 0002:00004e6c       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 10021e6c     D2Handlers.obj
- 0002:00004e80       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$6 10021e80     D2Handlers.obj
- 0002:00004e90       __ehfuncinfo$?Get@INIReader@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@00@Z 10021e90     INIReader.obj
- 0002:00004eb4       __unwindtable$?Get@INIReader@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@00@Z 10021eb4     INIReader.obj
- 0002:00004edc       __ehfuncinfo$?MakeKey@INIReader@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@0@Z 10021edc     INIReader.obj
- 0002:00004f00       __unwindtable$?MakeKey@INIReader@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@0@Z 10021f00     INIReader.obj
- 0002:00004f20       __ehfuncinfo$?ValueHandler@INIReader@@CAHPAXPBD11@Z 10021f20     INIReader.obj
- 0002:00004f44       __unwindtable$?ValueHandler@INIReader@@CAHPAXPBD11@Z 10021f44     INIReader.obj
- 0002:00004f54       __ehfuncinfo$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@QAEAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV21@@Z 10021f54     INIReader.obj
- 0002:00004f78       __unwindtable$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@QAEAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV21@@Z 10021f78     INIReader.obj
- 0002:00004f88       __ehfuncinfo$?OnClickLocation@@YIKPAUGame@@PAUUnitAny@@PAUSkillPacket@@K@Z 10021f88     LPackets.obj
- 0002:00004fac       __unwindtable$?OnClickLocation@@YIKPAUGame@@PAUUnitAny@@PAUSkillPacket@@K@Z 10021fac     LPackets.obj
- 0002:00004fbc       __ehfuncinfo$?EVENTS_SendClanInfo@@YAXPAUClientData@@@Z 10021fbc     LEvents.obj
- 0002:00004fe0       __unwindtable$?EVENTS_SendClanInfo@@YAXPAUClientData@@@Z 10021fe0     LEvents.obj
- 0002:00005000       __ehfuncinfo$?EVENTS_BroadcastClanInfo@@YAXPAUClientData@@@Z 10022000     LEvents.obj
- 0002:00005024       __unwindtable$?EVENTS_BroadcastClanInfo@@YAXPAUClientData@@@Z 10022024     LEvents.obj
- 0002:00005044       __ehfuncinfo$?OnDeath@@YGXPAUUnitAny@@0PAUGame@@@Z 10022044     LEvents.obj
- 0002:00005068       __unwindtable$?OnDeath@@YGXPAUUnitAny@@0PAUGame@@@Z 10022068     LEvents.obj
- 0002:00005090       __ehfuncinfo$?DoRoundEndStuff@@YAXPAUGame@@PAUUnitAny@@@Z 10022090     LEvents.obj
- 0002:000050b4       __unwindtable$?DoRoundEndStuff@@YAXPAUGame@@PAUUnitAny@@@Z 100220b4     LEvents.obj
- 0002:000050cc       __ehfuncinfo$?ParseItemsCmds@@YA_NPAUUnitAny@@PAD1@Z 100220cc     LItems.obj
- 0002:000050f0       __unwindtable$?ParseItemsCmds@@YA_NPAUUnitAny@@PAD1@Z 100220f0     LItems.obj
- 0002:000050f8       __ehfuncinfo$?ParseMonCmds@@YA_NPAUUnitAny@@PAD1@Z 100220f8     LMonsters.obj
- 0002:0000511c       __unwindtable$?ParseMonCmds@@YA_NPAUUnitAny@@PAD1@Z 1002211c     LMonsters.obj
- 0002:00005124       __ehfuncinfo$?QUEST_AllocQuestControl@@YGXPAUGame@@@Z 10022124     LQuests.obj
- 0002:00005148       __unwindtable$?QUEST_AllocQuestControl@@YGXPAUGame@@@Z 10022148     LQuests.obj
- 0002:00005150       __ehfuncinfo$?WE_GenerateNextDC@@YAXXZ 10022150     LWorldEvent.obj
- 0002:00005174       __unwindtable$?WE_GenerateNextDC@@YAXXZ 10022174     LWorldEvent.obj
- 0002:00005184       __ehfuncinfo$?WE_UpdateCounter@@YAXH@Z 10022184     LWorldEvent.obj
- 0002:000051a8       __unwindtable$?WE_UpdateCounter@@YAXH@Z 100221a8     LWorldEvent.obj
- 0002:000051b8       __ehfuncinfo$?SPECTATOR_OnClickSpecate@@YAKPAUGame@@PAUUnitAny@@1@Z 100221b8     LSpectator.obj
- 0002:000051dc       __unwindtable$?SPECTATOR_OnClickSpecate@@YAKPAUGame@@PAUUnitAny@@1@Z 100221dc     LSpectator.obj
- 0002:000051e4       __ehfuncinfo$?GetColorNameByAcc@@YAEV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 100221e4     Misc.obj
- 0002:00005208       __unwindtable$?GetColorNameByAcc@@YAEV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 10022208     Misc.obj
- 0002:00005210       __ehfuncinfo$?isAnAdmin@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 10022210     Misc.obj
- 0002:00005234       __unwindtable$?isAnAdmin@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 10022234     Misc.obj
- 0002:0000524c       __ehfuncinfo$?BroadcastExEvent@@YAXPAUGame@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 1002224c     Misc.obj
- 0002:00005270       __unwindtable$?BroadcastExEvent@@YAXPAUGame@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 10022270     Misc.obj
- 0002:00005280       __ehfuncinfo$?BroadcastExEvent@@YAXPAUGame@@HKHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 10022280     Misc.obj
- 0002:000052a4       __unwindtable$?BroadcastExEvent@@YAXPAUGame@@HKHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 100222a4     Misc.obj
- 0002:000052ac       __ehfuncinfo$?SendExEvent@@YAXPAUClientData@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 100222ac     Misc.obj
- 0002:000052d0       __unwindtable$?SendExEvent@@YAXPAUClientData@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 100222d0     Misc.obj
- 0002:000052e0       __ehfuncinfo$?BroadcastEventMsgEx@@YAXPAUGame@@HV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 100222e0     Misc.obj
- 0002:00005304       __unwindtable$?BroadcastEventMsgEx@@YAXPAUGame@@HV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 10022304     Misc.obj
- 0002:00005314       __ehfuncinfo$?ConvertSkill@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@G@Z 10022314     Misc.obj
- 0002:00005338       __unwindtable$?ConvertSkill@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@G@Z 10022338     Misc.obj
- 0002:00005358       __ehfuncinfo$??$to_lower@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@algorithm@boost@@YAXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z 10022358     Misc.obj
- 0002:0000537c       __unwindtable$??$to_lower@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@algorithm@boost@@YAXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z 1002237c     Misc.obj
- 0002:00005390       __ehfuncinfo$??0Warden@@QAE@XZ 10022390     Warden.obj
- 0002:000053b8       __unwindtable$??0Warden@@QAE@XZ 100223b8     Warden.obj
- 0002:00005410       __ehfuncinfo$?onJoinGame@Warden@@QAIKPAUPacketData@@@Z 10022410     Warden.obj
- 0002:00005434       __unwindtable$?onJoinGame@Warden@@QAIKPAUPacketData@@@Z 10022434     Warden.obj
- 0002:00005458       __ehfuncinfo$?loadConfig@Warden@@QAEXXZ 10022458     Warden.obj
- 0002:00005480       __unwindtable$?loadConfig@Warden@@QAEXXZ 10022480     Warden.obj
- 0002:000055f8       __ehfuncinfo$??0?$token_iterator@V?$char_separator@DU?$char_traits@D@std@@@boost@@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@@boost@@QAE@V?$char_separator@DU?$char_traits@D@std@@@1@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@1@Z 100225f8     Warden.obj
- 0002:0000561c       __unwindtable$??0?$token_iterator@V?$char_separator@DU?$char_traits@D@std@@@boost@@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@@boost@@QAE@V?$char_separator@DU?$char_traits@D@std@@@1@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@1@Z 1002261c     Warden.obj
- 0002:00005640       __sehtable$___scrt_is_nonwritable_in_current_image 10022640     MSVCRT:utility.obj
- 0002:00005660       __sehtable$?dllmain_crt_process_attach@@YAHQAUHINSTANCE__@@QAX@Z 10022660     MSVCRT:dll_dllmain.obj
- 0002:00005680       __sehtable$?dllmain_crt_process_detach@@YAH_N@Z 10022680     MSVCRT:dll_dllmain.obj
- 0002:000056a8       __sehtable$?dllmain_dispatch@@YAHQAUHINSTANCE__@@KQAX@Z 100226a8     MSVCRT:dll_dllmain.obj
- 0002:00005790       .edata                     10022790     d2warden.exp
- 0002:000057b8       szName                     100227b8     d2warden.exp
- 0002:00005b66       .idata$6                   10022b66     kernel32:KERNEL32.dll
- 0002:0000629a       .idata$6                   1002329a     msvcprt:MSVCP140.dll
- 0002:00006366       .idata$6                   10023366     vcruntime:VCRUNTIME140.dll
- 0002:000065b4       .idata$6                   100235b4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
- 0002:000065d6       .idata$6                   100235d6     ucrt:api-ms-win-crt-string-l1-1-0.dll
- 0002:000065f8       .idata$6                   100235f8     ucrt:api-ms-win-crt-convert-l1-1-0.dll
- 0002:0000661a       .idata$6                   1002361a     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
- 0002:0000663a       .idata$6                   1002363a     ucrt:api-ms-win-crt-utility-l1-1-0.dll
- 0002:0000665c       .idata$6                   1002365c     ucrt:api-ms-win-crt-time-l1-1-0.dll
- 0002:0000667c       .idata$6                   1002367c     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:000041c0       _NaN                       100211c0     MSVCRT:ftol3.obj
+ 0002:000041c4       _onept5                    100211c4     MSVCRT:ftol3.obj
+ 0002:000041c8       _DP2to32                   100211c8     MSVCRT:ftol3.obj
+ 0002:000041c8       _Int32ToUInt32             100211c8     MSVCRT:ftol3.obj
+ 0002:00004b68       __ehfuncinfo$?OnLastHit@@YGXPAUUnitAny@@0PAUDamage@@@Z 10021b68     D2Handlers.obj
+ 0002:00004b90       __unwindtable$?OnLastHit@@YGXPAUUnitAny@@0PAUDamage@@@Z 10021b90     D2Handlers.obj
+ 0002:00004bd0       __ehfuncinfo$?OnChat@@YIHPAUUnitAny@@PAE@Z 10021bd0     D2Handlers.obj
+ 0002:00004bf8       __unwindtable$?OnChat@@YIHPAUUnitAny@@PAE@Z 10021bf8     D2Handlers.obj
+ 0002:00004c58       __ehfuncinfo$??A?$map@KPAUUnitAny@@U?$less@K@std@@V?$allocator@U?$pair@$$CBKPAUUnitAny@@@std@@@3@@std@@QAEAAPAUUnitAny@@ABK@Z 10021c58     D2Handlers.obj
+ 0002:00004c7c       __unwindtable$??A?$map@KPAUUnitAny@@U?$less@K@std@@V?$allocator@U?$pair@$$CBKPAUUnitAny@@@std@@@3@@std@@QAEAAPAUUnitAny@@ABK@Z 10021c7c     D2Handlers.obj
+ 0002:00004c84       __ehfuncinfo$?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 10021c84     D2Handlers.obj
+ 0002:00004ca8       __unwindtable$?str@?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 10021ca8     D2Handlers.obj
+ 0002:00004cb0       __ehfuncinfo$??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 10021cb0     D2Handlers.obj
+ 0002:00004cd4       __unwindtable$??0?$basic_ostringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 10021cd4     D2Handlers.obj
+ 0002:00004ce4       __ehfuncinfo$?getInstance@Warden@@SAAAV1@XZ 10021ce4     D2Handlers.obj
+ 0002:00004d08       __unwindtable$?getInstance@Warden@@SAAAV1@XZ 10021d08     D2Handlers.obj
+ 0002:00004d10       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 10021d10     D2Handlers.obj
+ 0002:00004d34       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 10021d34     D2Handlers.obj
+ 0002:00004d64       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 10021d64     D2Handlers.obj
+ 0002:00004d78       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z$6 10021d78     D2Handlers.obj
+ 0002:00004d88       __ehfuncinfo$??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10021d88     D2Handlers.obj
+ 0002:00004d88       __ehfuncinfo$??1Warden@@QAE@XZ 10021d88     Warden.obj
+ 0002:00004d88       __ehfuncinfo$??1WardenClient@@QAE@XZ 10021d88     WardenClient.obj
+ 0002:00004dac       __ehfuncinfo$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10021dac     D2Handlers.obj
+ 0002:00004dd0       __unwindtable$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 10021dd0     D2Handlers.obj
+ 0002:00004dd8       __ehfuncinfo$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 10021dd8     D2Handlers.obj
+ 0002:00004dfc       __unwindtable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 10021dfc     D2Handlers.obj
+ 0002:00004e2c       __tryblocktable$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 10021e2c     D2Handlers.obj
+ 0002:00004e40       __catchsym$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$6 10021e40     D2Handlers.obj
+ 0002:00004e50       __ehfuncinfo$?Get@INIReader@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@00@Z 10021e50     INIReader.obj
+ 0002:00004e74       __unwindtable$?Get@INIReader@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@00@Z 10021e74     INIReader.obj
+ 0002:00004e9c       __ehfuncinfo$?MakeKey@INIReader@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@0@Z 10021e9c     INIReader.obj
+ 0002:00004ec0       __unwindtable$?MakeKey@INIReader@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@0@Z 10021ec0     INIReader.obj
+ 0002:00004ee0       __ehfuncinfo$?ValueHandler@INIReader@@CAHPAXPBD11@Z 10021ee0     INIReader.obj
+ 0002:00004f04       __unwindtable$?ValueHandler@INIReader@@CAHPAXPBD11@Z 10021f04     INIReader.obj
+ 0002:00004f14       __ehfuncinfo$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@QAEAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV21@@Z 10021f14     INIReader.obj
+ 0002:00004f38       __unwindtable$??A?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@QAEAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@ABV21@@Z 10021f38     INIReader.obj
+ 0002:00004f48       __ehfuncinfo$?OnClickLocation@@YIKPAUGame@@PAUUnitAny@@PAUSkillPacket@@K@Z 10021f48     LPackets.obj
+ 0002:00004f6c       __unwindtable$?OnClickLocation@@YIKPAUGame@@PAUUnitAny@@PAUSkillPacket@@K@Z 10021f6c     LPackets.obj
+ 0002:00004f7c       __ehfuncinfo$?EVENTS_SendClanInfo@@YAXPAUClientData@@@Z 10021f7c     LEvents.obj
+ 0002:00004fa0       __unwindtable$?EVENTS_SendClanInfo@@YAXPAUClientData@@@Z 10021fa0     LEvents.obj
+ 0002:00004fc0       __ehfuncinfo$?EVENTS_BroadcastClanInfo@@YAXPAUClientData@@@Z 10021fc0     LEvents.obj
+ 0002:00004fe4       __unwindtable$?EVENTS_BroadcastClanInfo@@YAXPAUClientData@@@Z 10021fe4     LEvents.obj
+ 0002:00005004       __ehfuncinfo$?OnDeath@@YGXPAUUnitAny@@0PAUGame@@@Z 10022004     LEvents.obj
+ 0002:00005028       __unwindtable$?OnDeath@@YGXPAUUnitAny@@0PAUGame@@@Z 10022028     LEvents.obj
+ 0002:00005050       __ehfuncinfo$?DoRoundEndStuff@@YAXPAUGame@@PAUUnitAny@@@Z 10022050     LEvents.obj
+ 0002:00005074       __unwindtable$?DoRoundEndStuff@@YAXPAUGame@@PAUUnitAny@@@Z 10022074     LEvents.obj
+ 0002:0000508c       __ehfuncinfo$?ParseItemsCmds@@YA_NPAUUnitAny@@PAD1@Z 1002208c     LItems.obj
+ 0002:000050b0       __unwindtable$?ParseItemsCmds@@YA_NPAUUnitAny@@PAD1@Z 100220b0     LItems.obj
+ 0002:000050b8       __ehfuncinfo$?ParseMonCmds@@YA_NPAUUnitAny@@PAD1@Z 100220b8     LMonsters.obj
+ 0002:000050dc       __unwindtable$?ParseMonCmds@@YA_NPAUUnitAny@@PAD1@Z 100220dc     LMonsters.obj
+ 0002:000050e4       __ehfuncinfo$?QUEST_AllocQuestControl@@YGXPAUGame@@@Z 100220e4     LQuests.obj
+ 0002:00005108       __unwindtable$?QUEST_AllocQuestControl@@YGXPAUGame@@@Z 10022108     LQuests.obj
+ 0002:00005110       __ehfuncinfo$?WE_GenerateNextDC@@YAXXZ 10022110     LWorldEvent.obj
+ 0002:00005134       __unwindtable$?WE_GenerateNextDC@@YAXXZ 10022134     LWorldEvent.obj
+ 0002:00005144       __ehfuncinfo$?WE_UpdateCounter@@YAXH@Z 10022144     LWorldEvent.obj
+ 0002:00005168       __unwindtable$?WE_UpdateCounter@@YAXH@Z 10022168     LWorldEvent.obj
+ 0002:00005178       __ehfuncinfo$?SPECTATOR_OnClickSpecate@@YAKPAUGame@@PAUUnitAny@@1@Z 10022178     LSpectator.obj
+ 0002:0000519c       __unwindtable$?SPECTATOR_OnClickSpecate@@YAKPAUGame@@PAUUnitAny@@1@Z 1002219c     LSpectator.obj
+ 0002:000051a4       __ehfuncinfo$?GetColorNameByAcc@@YAEV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 100221a4     Misc.obj
+ 0002:000051c8       __unwindtable$?GetColorNameByAcc@@YAEV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 100221c8     Misc.obj
+ 0002:000051d0       __ehfuncinfo$?isAnAdmin@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 100221d0     Misc.obj
+ 0002:000051f4       __unwindtable$?isAnAdmin@@YA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 100221f4     Misc.obj
+ 0002:0000520c       __ehfuncinfo$?BroadcastExEvent@@YAXPAUGame@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 1002220c     Misc.obj
+ 0002:00005230       __unwindtable$?BroadcastExEvent@@YAXPAUGame@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 10022230     Misc.obj
+ 0002:00005240       __ehfuncinfo$?BroadcastExEvent@@YAXPAUGame@@HKHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 10022240     Misc.obj
+ 0002:00005264       __unwindtable$?BroadcastExEvent@@YAXPAUGame@@HKHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 10022264     Misc.obj
+ 0002:0000526c       __ehfuncinfo$?SendExEvent@@YAXPAUClientData@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 1002226c     Misc.obj
+ 0002:00005290       __unwindtable$?SendExEvent@@YAXPAUClientData@@HHHFFV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 10022290     Misc.obj
+ 0002:000052a0       __ehfuncinfo$?BroadcastEventMsgEx@@YAXPAUGame@@HV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 100222a0     Misc.obj
+ 0002:000052c4       __unwindtable$?BroadcastEventMsgEx@@YAXPAUGame@@HV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1@Z 100222c4     Misc.obj
+ 0002:000052d4       __ehfuncinfo$?ConvertSkill@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@G@Z 100222d4     Misc.obj
+ 0002:000052f8       __unwindtable$?ConvertSkill@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@G@Z 100222f8     Misc.obj
+ 0002:00005318       __ehfuncinfo$??$to_lower@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@algorithm@boost@@YAXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z 10022318     Misc.obj
+ 0002:0000533c       __unwindtable$??$to_lower@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@algorithm@boost@@YAXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z 1002233c     Misc.obj
+ 0002:00005350       __ehfuncinfo$??0Warden@@QAE@XZ 10022350     Warden.obj
+ 0002:00005378       __unwindtable$??0Warden@@QAE@XZ 10022378     Warden.obj
+ 0002:000053d0       __ehfuncinfo$?onJoinGame@Warden@@QAIKPAUPacketData@@@Z 100223d0     Warden.obj
+ 0002:000053f4       __unwindtable$?onJoinGame@Warden@@QAIKPAUPacketData@@@Z 100223f4     Warden.obj
+ 0002:00005418       __ehfuncinfo$?loadConfig@Warden@@QAEXXZ 10022418     Warden.obj
+ 0002:00005440       __unwindtable$?loadConfig@Warden@@QAEXXZ 10022440     Warden.obj
+ 0002:000055b8       __ehfuncinfo$??0?$token_iterator@V?$char_separator@DU?$char_traits@D@std@@@boost@@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@@boost@@QAE@V?$char_separator@DU?$char_traits@D@std@@@1@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@1@Z 100225b8     Warden.obj
+ 0002:000055dc       __unwindtable$??0?$token_iterator@V?$char_separator@DU?$char_traits@D@std@@@boost@@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@4@@boost@@QAE@V?$char_separator@DU?$char_traits@D@std@@@1@V?$_String_const_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@1@Z 100225dc     Warden.obj
+ 0002:00005600       __sehtable$___scrt_is_nonwritable_in_current_image 10022600     MSVCRT:utility.obj
+ 0002:00005620       __sehtable$?dllmain_crt_process_attach@@YAHQAUHINSTANCE__@@QAX@Z 10022620     MSVCRT:dll_dllmain.obj
+ 0002:00005640       __sehtable$?dllmain_crt_process_detach@@YAH_N@Z 10022640     MSVCRT:dll_dllmain.obj
+ 0002:00005668       __sehtable$?dllmain_dispatch@@YAHQAUHINSTANCE__@@KQAX@Z 10022668     MSVCRT:dll_dllmain.obj
+ 0002:00005750       .edata                     10022750     d2warden.exp
+ 0002:00005778       szName                     10022778     d2warden.exp
+ 0002:00005b26       .idata$6                   10022b26     kernel32:KERNEL32.dll
+ 0002:0000625a       .idata$6                   1002325a     msvcprt:MSVCP140.dll
+ 0002:00006326       .idata$6                   10023326     vcruntime:VCRUNTIME140.dll
+ 0002:00006574       .idata$6                   10023574     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:00006596       .idata$6                   10023596     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:000065b8       .idata$6                   100235b8     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0002:000065da       .idata$6                   100235da     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:000065fa       .idata$6                   100235fa     ucrt:api-ms-win-crt-utility-l1-1-0.dll
+ 0002:0000661c       .idata$6                   1002361c     ucrt:api-ms-win-crt-time-l1-1-0.dll
+ 0002:0000663c       .idata$6                   1002363c     ucrt:api-ms-win-crt-heap-l1-1-0.dll
  0003:00000000       unk1                       10024000     HashGameSeed.obj
  0003:00000100       unk_18C3010                10024100     HashGameSeed.obj
  0003:00000101       unk2                       10024101     HashGameSeed.obj
