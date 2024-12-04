@@ -239,7 +239,7 @@ void SendMsgToClient(ClientData* ptClient, char *Msg...)
 
 	vsnprintf_s(text, len, 255, Msg, arguments);
 	va_end(arguments);
-	const char * szReceiper = "GS";
+	const char * szReceiper = "Diablo II BR";
 
 	size_t nameSize = strlen(szReceiper) + 1;
 	size_t textSize = strlen(text) + 1;
@@ -288,7 +288,7 @@ void BroadcastMsg(Game* pGame,char *Msg...)
 	vsnprintf_s(text,len,255,Msg,arguments);
 	va_end(arguments);
 	 
-	const char * szReceiper = "ÿc1GS";
+	const char * szReceiper = "Ã¿c1Diablo II BR";
 
 	size_t nameSize = strlen(szReceiper) + 1;
 	size_t textSize = strlen(text) + 1;

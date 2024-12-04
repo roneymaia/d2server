@@ -956,7 +956,7 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 				}
 				if (!LvlId) return false;
 				if (LvlId >= (*D2Vars.D2COMMON_sgptDataTables)->dwLevelsRecs) return false;
-				SendMsgToClient(aUnit->pPlayerData->pClientData, "Moving '%s' to level '%d'...", aUnit->pPlayerData->szName, LvlId);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "Moving '%s' to level '%d'...", aUnit->pPlayerData->szName, LvlId);
 				D2ASMFuncs::D2GAME_MoveUnitToLevelId(aUnit, LvlId, aUnit->pGame);
 				return false;
 			}
@@ -987,7 +987,7 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 				int LvlId = atoi(str);
 				if (!LvlId) return false;
 				if (LvlId >= (*D2Vars.D2COMMON_sgptDataTables)->dwLevelsRecs) return false;
-				SendMsgToClient(aUnit->pPlayerData->pClientData, "Opening a portal to level '%d'...", LvlId);
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "Opening a portal to level '%d'...", LvlId);
 				if (QUESTS_OpenPortal(pUnit->pGame, pUnit, LvlId)) {
 					if (LvlId == UBER_TRISTRAM)
 						pUnit->pGame->bUberQuestFlags.bOpenedTristramPortal = true;
@@ -1079,12 +1079,13 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 			if (_stricmp(str, "#setstate") == 0)
 			{
 				if (!isAnAdmin(pUnit->pPlayerData->pClientData->AccountName)) return TRUE;
+				UnitAny* aUnit = pUnit;
 
 				str = strtok_s(NULL, " ", &t);
-				if (!str) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Usage: #setstate <stateid> <1,0>"); return false; }
+				if (!str) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Usage: #setstate <stateid> <1,0> <charname>"); return false; }
 				DWORD nState = atoi(str);
 				str = strtok_s(NULL, " ", &t);
-				if (!str) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Usage: #setstate <stateid> <1,0>"); return false; }
+				if (!str) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Usage: #setstate <stateid> <1,0> <charname>"); return false; }
 				int nHowSet = atoi(str);
 
 				if (nState == 0 || nState > (*D2Vars.D2COMMON_sgptDataTables)->dwStatesRecs)
@@ -1097,7 +1098,51 @@ BOOL __fastcall OnChat(UnitAny* pUnit, BYTE *ThePacket)
 					SendMsgToClient(pUnit->pPlayerData->pClientData, "Unknown state's state (%d). Only 1 or 0 are allowed!", nHowSet);
 					return false;
 				}
-				D2Funcs.D2COMMON_SetGfxState(pUnit, nState, nHowSet);
+
+				str = strtok_s(NULL, " ", &t);
+				if (str) {
+					WardenClient_i ptCurrentClient = Warden::getInstance().findClientByName(str);
+					if (ptCurrentClient == Warden::getInstance().getInvalidClient()) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Player not found!"); return false; }
+					if (!ptCurrentClient->ptPlayer) { return false; }
+					if (aUnit == ptCurrentClient->ptPlayer){ return false; }
+					aUnit = ptCurrentClient->ptPlayer;
+				}
+
+				D2Funcs.D2COMMON_SetGfxState(aUnit, nState, nHowSet);
+
+				SendMsgToClient(pUnit->pPlayerData->pClientData, "State %d has been set!", nState);
+				return false;
+			}
+
+			if (_stricmp(str, "#setstateall") == 0)
+			{
+				if (!isAnAdmin(pUnit->pPlayerData->pClientData->AccountName)) return TRUE;
+
+				str = strtok_s(NULL, " ", &t);
+				if (!str) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Usage: #setstate <stateid> <1,0> <charname>"); return false; }
+				DWORD nState = atoi(str);
+				str = strtok_s(NULL, " ", &t);
+				if (!str) { SendMsgToClient(pUnit->pPlayerData->pClientData, "Usage: #setstate <stateid> <1,0> <charname>"); return false; }
+				int nHowSet = atoi(str);
+
+				if (nState == 0 || nState > (*D2Vars.D2COMMON_sgptDataTables)->dwStatesRecs)
+				{
+					SendMsgToClient(pUnit->pPlayerData->pClientData, "State '%d' is out of range (%d)...", nState, (*D2Vars.D2COMMON_sgptDataTables)->dwStatesRecs);
+					return false;
+				}
+				if (nHowSet > 1)
+				{
+					SendMsgToClient(pUnit->pPlayerData->pClientData, "Unknown state's state (%d). Only 1 or 0 are allowed!", nHowSet);
+					return false;
+				}
+
+				for (ClientData* pClientList = pUnit->pPlayerData->pClientData->pGame->pClientList; pClientList; pClientList = pClientList->ptPrevious)
+				{
+					if (!(pClientList->InitStatus & 4))
+						continue;
+					D2Funcs.D2COMMON_SetGfxState(pClientList->pPlayerUnit, nState, nHowSet);
+				}
+
 
 				SendMsgToClient(pUnit->pPlayerData->pClientData, "State %d has been set!", nState);
 				return false;

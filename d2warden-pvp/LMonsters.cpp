@@ -89,6 +89,7 @@ bool ParseMonCmds(UnitAny* pUnit, char* str, char *t)
 
 		int count = 1;
 		WardenClient_i psUnit = ptCurrentClient;
+		Game* gameUnit = psUnit->ptPlayer->pGame;
 
 		Room1* aRoom = pUnit->pPath->pRoom1;
 		int xPos = pUnit->pPath->xPos;
@@ -97,19 +98,32 @@ bool ParseMonCmds(UnitAny* pUnit, char* str, char *t)
 		str = strtok_s(NULL," ",&t);
 		if(str) 
 		{
-		count = atoi(str);
-		str = strtok_s(NULL," ",&t);
-		if(str)
-		{
-			WardenClient_i psUnit = Warden::getInstance().findClientByName(str);
-			if (psUnit != Warden::getInstance().getInvalidClient())
+			count = atoi(str);
+			str = strtok_s(NULL," ",&t);
+			if(str)
 			{
-			SendMsgToClient(pUnit->pPlayerData->pClientData,"Spawning monster on %s", psUnit->CharName);
-			aRoom = psUnit->ptPlayer->pPath->pRoom1;
-			xPos = psUnit->ptPlayer->pPath->xPos;
-			yPos = psUnit->ptPlayer->pPath->yPos;
+				WardenClient_i psUnitFinded = Warden::getInstance().findClientByName(str);
+				if (psUnitFinded != Warden::getInstance().getInvalidClient())
+				{
+					if (psUnitFinded->ptPlayer && 
+						psUnitFinded->ptPlayer->pGame &&
+						psUnitFinded->ptPlayer->pPath && 
+						psUnitFinded->ptPlayer->pPath->pRoom1
+					) { // Verificando ponteiros nulos
+						SendMsgToClient(pUnit->pPlayerData->pClientData, "Spawning monster on %s", str);
+						
+						// Acessando membros do caminho do jogador
+						aRoom = psUnitFinded->ptPlayer->pPath->pRoom1;
+						xPos = psUnitFinded->ptPlayer->pPath->xPos;
+						yPos = psUnitFinded->ptPlayer->pPath->yPos;
+
+						gameUnit = psUnitFinded->ptPlayer->pGame;
+					} else {
+						SendMsgToClient(pUnit->pPlayerData->pClientData, "Invalid path for player %s", str);
+						return false;
+					}
+				}
 			}
-		}
 		}
 
 		
@@ -126,7 +140,7 @@ bool ParseMonCmds(UnitAny* pUnit, char* str, char *t)
 		aRoom =	D2ASMFuncs::D2GAME_FindFreeCoords(&Pos,aRoom,&Out,1);
 		if(!aRoom) {SendMsgToClient(pUnit->pPlayerData->pClientData,"FindFreeCoords failed!"); break;}
 
-		ptMonster = D2Funcs.D2GAME_SpawnMonster(No,1,psUnit->ptPlayer->pGame,aRoom,Out.x,Out.y,-1,0);
+		ptMonster = D2Funcs.D2GAME_SpawnMonster(No,1,gameUnit,aRoom,Out.x,Out.y,-1,0);
 		if(ptMonster) break;
 
 		if(i % 2) Pos.x = Out.x + (rand() % 4); else  Pos.x = Out.x - (rand() % 4);
